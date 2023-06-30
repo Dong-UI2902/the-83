@@ -1,11 +1,11 @@
 import React from "react";
-import Particle from "../components/Particle/Particle";
 import Layout from "../components/Layout/Layout";
+import Header from "../components/Header/Header";
 
 function home() {
   return (
     <Layout props={{ marginTop: "70px" }}>
-      <Particle />
+      <Header />
     </Layout>
   );
 }

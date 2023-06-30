@@ -118,7 +118,7 @@ export default function PersistentDrawerLeft() {
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <CssBaseline />
-        <AppBar position="fixed">
+        <AppBar position="fixed" sx={{ backgroundColor: "unset" }}>
           <Layout>
             <Toolbar>
               <IconButton
@@ -147,7 +147,11 @@ export default function PersistentDrawerLeft() {
                 The83
               </Typography>
               <Box
-                sx={{ display: { xs: "none", sm: "block" }, margin: "0 auto" }}
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
               >
                 {navItems.map((item, index) => (
                   <Link key={index} sx={{ color: "#fff" }} href={item.href}>

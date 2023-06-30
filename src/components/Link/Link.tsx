@@ -15,11 +15,12 @@ const theme = createTheme({
         // Name of the slot
         root: {
           minWidth: "64px",
-          padding: "6px 8px",
+          padding: "6px 10px",
           //   textTransform: "uppercase",
           fontWeight: "500",
           fontSize: "1rem",
           lineHeight: "1.75",
+          textDecoration: "none",
           "&:hover": {
             "text-decoration": "none",
           },
