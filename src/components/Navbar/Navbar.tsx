@@ -60,9 +60,9 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginLeft: 0,
   width: "100%",
@@ -73,6 +73,7 @@ const Search = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     maxWidth: "200px",
   },
+  color: "var(--dark-color)",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -100,6 +101,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       },
     },
   },
+  fontSize: "14px",
+  fontFamily: "inherit",
 }));
 
 export default function PersistentDrawerLeft() {
@@ -118,7 +121,7 @@ export default function PersistentDrawerLeft() {
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <CssBaseline />
-        <AppBar position="fixed" sx={{ backgroundColor: "unset" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "var(--light-color)" }}>
           <Layout>
             <Toolbar>
               <IconButton
@@ -139,7 +142,7 @@ export default function PersistentDrawerLeft() {
                   flexGrow: 1,
                   display: {
                     textDecoration: "none",
-                    color: "inherit",
+                    color: "var(--dark-color)",
                   },
                   maxWidth: "60px",
                 }}
@@ -154,7 +157,11 @@ export default function PersistentDrawerLeft() {
                 }}
               >
                 {navItems.map((item, index) => (
-                  <Link key={index} sx={{ color: "#fff" }} href={item.href}>
+                  <Link
+                    key={index}
+                    sx={{ color: "var(--dark-color)" }}
+                    href={item.href}
+                  >
                     {item.name}
                   </Link>
                 ))}
