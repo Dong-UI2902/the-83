@@ -191,3 +191,7 @@ body {
         transform: translateY(0);
     }
 }
+
+.service-box:hover {
+    filter: brightness(115%);
+}

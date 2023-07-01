@@ -69,7 +69,7 @@ function Particle() {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 2,
             straight: false,
           },
           number: {
