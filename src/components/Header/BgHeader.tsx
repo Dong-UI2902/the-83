@@ -1,12 +1,11 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 
 function BgHeader() {
   return (
     <div
       style={{
         position: "absolute",
-        transform: "translate(-10%, -7%)",
+        transform: "translate(-2%, -7%)",
         top: -10,
         right: 0,
       }}

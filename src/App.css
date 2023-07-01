@@ -4,14 +4,190 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --main-color: #0d47a1;
     --light-color: #ffff;
     --dark-color: #000000;
 }
 
+.session {
+    padding-top: 180px;
+    z-index: 3;
+    position: relative;
+}
+
 #tsparticles {
     position: absolute;
     width: 100%;
     height: 90vh;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.text-transt-color {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img-header {
+    position: absolute;
+}
+
+.main-img {
+    animation: 18s ease 0s infinite normal none running main-img;
+}
+
+@keyframes main-img {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.search {
+    top: -140px;
+    left: 30px;
+    width: 250px;
+    animation: 10s ease 0s infinite normal none running search;
+}
+
+@keyframes search {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.avatar {
+    top: 10px;
+    left: 0px;
+    width: 250px;
+    animation: 12s ease 0s infinite normal none running avatar;
+}
+
+@keyframes avatar {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.meta {
+    bottom: 50px;
+    right: 30px;
+    width: 220px;
+    background-color: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 20s ease 2s infinite normal none running meta;
+}
+
+@keyframes meta {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.web {
+    bottom: -210px;
+    right: 130px;
+    width: 320px;
+    animation: 18s ease 1s infinite normal none running web;
+}
+
+@keyframes web {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.tiktok {
+    width: 150px;
+    bottom: -100px;
+    left: 50px;
+    animation: 14s ease 0.1s infinite normal none running tiktok;
+}
+
+@keyframes tiktok {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

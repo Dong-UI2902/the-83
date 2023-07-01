@@ -4,19 +4,16 @@ import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
-import BgHeader from "./BgHeader";
 
 const LogoHeader = styled("label")(({ theme }) => ({
   fontSize: "8rem",
   backgroundImage:
     "linear-gradient(rgb(255, 28, 247) 25%, rgb(178, 73, 248) 100%)",
-  backgroundClip: "text",
-  WebkitTextFillColor: "transparent",
   fontWeight: 700,
 }));
 
 const ImageLogoHeader = styled("img")(({ theme }) => ({
-  maxWidth: "250px",
+  maxWidth: "100px",
   display: "block",
   margin: "0 auto",
 }));
@@ -27,7 +24,7 @@ ImageLogoHeader.defaultProps = {
 
 function Header() {
   return (
-    <Box sx={{ zIndex: 0, position: "relative", height: "90vh" }}>
+    <Box sx={{ zIndex: 0, position: "relative", height: "80vh" }}>
       <Particle />
       <Grid
         container
@@ -37,16 +34,31 @@ function Header() {
         position={"relative"}
         height={"100%"}
       >
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Typography variant="h3" gutterBottom>
-            <LogoHeader>The83</LogoHeader> Social Media
+            <LogoHeader className="text-transt-color">The83</LogoHeader> Social
+            Media
           </Typography>
           <Typography variant="h4" gutterBottom>
             Giải Pháp Kinh Doanh Thời Đại Số
           </Typography>
         </Grid>
-        <Grid item xs={4}>
-          <ImageLogoHeader />
+        <Grid item xs={5} position="relative">
+          <ImageLogoHeader className="main-img" />
+          {/* <img className="img-header" src="/assets/img/home/ipad.png" />
+          
+           */}
+          <img
+            className="img-header tiktok"
+            src="/assets/img/home/logotiktok.png"
+          />
+          <img className="img-header web" src="/assets/img/home/web2.png" />
+          <img className="img-header meta" src="/assets/img/home/meta.png" />
+          <img className="img-header avatar" src="/assets/img/home/ava.png" />
+          <img
+            className="img-header search"
+            src="/assets/img/home/search.png"
+          />
         </Grid>
       </Grid>
     </Box>

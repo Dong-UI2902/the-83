@@ -29,7 +29,7 @@ function Particle() {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push",
             },
             onHover: {
@@ -69,7 +69,7 @@ function Particle() {
               default: "bounce",
             },
             random: false,
-            speed: 1.5,
+            speed: 1,
             straight: false,
           },
           number: {
