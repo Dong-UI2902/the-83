@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Avatar from "@mui/material/Avatar";
@@ -6,8 +6,15 @@ import Avatar from "@mui/material/Avatar";
 function Service() {
   let sliderIndex = 1;
   let timeout;
-  const layers = [...document.querySelectorAll(".layer")];
-  const covers = [...document.querySelectorAll(".photo-frame")];
+  
+  let layers = [];
+  let covers = [];
+
+  useEffect(() => {
+    layers = [...document.querySelectorAll(".layer")];
+    covers = [...document.querySelectorAll(".photo-frame")];
+  }, []);
+
 
   function changeCoverAnimState(state = 0) {
     const st = state === 1 ? "running" : "paused";
@@ -18,7 +25,6 @@ function Service() {
   }
 
   function switchLayer(step = 1) {
-    console.log("next");
     const nextSlide =
       (sliderIndex + step) % 3 === 0 ? 3 : (sliderIndex + step) % 3;
 
@@ -27,7 +33,6 @@ function Service() {
     timeout = setTimeout(() => {
       changeCoverAnimState(0);
     }, 500);
-
     for (const i of layers) {
       i.classList.remove("layer-displayed");
       i.classList.remove("layer-displayed-exit");

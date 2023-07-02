@@ -46,7 +46,10 @@ function About() {
             tại Thành phố Hồ Chí Minh với sứ mệnh thúc đẩy doanh số kinh doanh
             cho quý khách hàng trên thị trường Online.
           </Box>
-          <Button variant="outlined" sx={{ fontWeight: "600" }}>
+          <Button
+            variant="outlined"
+            sx={{ fontWeight: "600", marginTop: "10px" }}
+          >
             Tìm hiểu thêm
           </Button>
         </Grid>

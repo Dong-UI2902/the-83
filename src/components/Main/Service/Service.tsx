@@ -2,25 +2,9 @@ import { Box, styled } from "@mui/material";
 import React from "react";
 import Slide from "./Slide";
 
-const BgImgStyle = styled("img")(({ theme }) => ({
-  width: "100%",
-  display: "block",
-  margin: "0 auto",
-}));
-
 function Service() {
   return (
     <div className="session">
-      <Box
-        sx={{
-          position: "absolute",
-          top: "-25%",
-          right: "-25%",
-          zIndex: "0",
-        }}
-      >
-        <BgImgStyle src="/assets/img/background/theming-gradient.svg" alt="" />
-      </Box>
       <Box
         sx={{
           position: "relative",

@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import Header from "../components/Header/Header";
 import BgHeader from "../components/Header/BgHeader";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, styled } from "@mui/material";
 import CardUi from "../components/Main/CardUi";
 import SettingsIcon from "@mui/icons-material/Settings";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
@@ -10,6 +10,12 @@ import CoPresentIcon from "@mui/icons-material/CoPresent";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import About from "../components/Main/About";
 import Service from "../components/Main/Service/Service";
+
+const BgImgStyle = styled("img")(({ theme }) => ({
+  width: "100%",
+  display: "block",
+  margin: "0 auto",
+}));
 
 function home() {
   return (
@@ -57,7 +63,22 @@ function home() {
         </Grid>
       </Box>
       <About />
-      <Service />
+      <Box sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "-25%",
+            right: "-25%",
+            zIndex: "0",
+          }}
+        >
+          <BgImgStyle
+            src="/assets/img/background/theming-gradient.svg"
+            alt=""
+          />
+        </Box>
+        <Service />
+      </Box>
     </Layout>
   );
 }
