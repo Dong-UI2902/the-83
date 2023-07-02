@@ -9,7 +9,7 @@ import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import About from "../components/Main/About";
-import Service from "../components/Main/Service";
+import Service from "../components/Main/Service/Service";
 
 function home() {
   return (
