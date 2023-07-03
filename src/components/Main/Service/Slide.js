@@ -27,7 +27,6 @@ function Service() {
   function switchLayer(step = 1) {
     const nextSlide =
       (sliderIndex + step) % 3 === 0 ? 3 : (sliderIndex + step) % 3;
-
     changeCoverAnimState(1);
     clearTimeout(timeout);
     timeout = setTimeout(() => {
@@ -98,7 +97,7 @@ function Service() {
           <div className="layer layer-displayed" data-scene="1"></div>
           <div className="layer" data-scene="2"></div>
           <div className="layer" data-scene="3"></div>
-          <div className="photo-frame">
+          {/* <div className="photo-frame">
             <div
               className="layer layer-displayed"
               style={{
@@ -124,8 +123,8 @@ function Service() {
               data-scene="3"
             ></div>
             <div className="cover"></div>
-          </div>
-          <div className="photo-name">
+          </div> */}
+          {/* <div className="photo-name">
             <div className="photo-name__wrapper">
               <div className="layer layer-displayed" data-scene="1">
                 <span className="photo-name__title">BRION FOX</span>
@@ -140,7 +139,7 @@ function Service() {
                 <span>RIDING THE SPLASH</span>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="photo-frame">
             <div
               className="layer layer-displayed"
@@ -162,7 +161,7 @@ function Service() {
               className="layer"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=918195bdc5a37a2f412cf49234183427&auto=format&fit=crop&w=1350&q=80')",
+                  "url('assets/img/services/fb-desc.webp')",
               }}
               data-scene="3"
             ></div>

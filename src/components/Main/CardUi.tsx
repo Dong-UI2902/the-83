@@ -30,6 +30,7 @@ const CardUi: FC<{ title: string; icon: any; desc: any }> = ({
             display: "flex",
             gap: 1,
             fontWeight: "500",
+            alignItems: "center",
           }}
         >
           <IconWrapper alt="ui-1">{icon}</IconWrapper>

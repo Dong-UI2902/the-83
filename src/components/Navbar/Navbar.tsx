@@ -133,21 +133,19 @@ export default function PersistentDrawerLeft() {
               >
                 <MenuIcon />
               </IconButton>
+
               <Typography
                 variant="h6"
                 noWrap
                 component="a"
                 href="/"
                 sx={{
-                  flexGrow: 1,
-                  display: {
-                    textDecoration: "none",
-                    color: "var(--dark-color)",
-                  },
-                  maxWidth: "60px",
+                  display: "flex",
+                  alignItems: "center",
+                  maxWidth: "50px",
                 }}
               >
-                The83
+                <img width={"100%"} src="/assets/img/blue-logo.png" />
               </Typography>
               <Box
                 sx={{

@@ -3,6 +3,7 @@ import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/kien-thuc" element={<Home />} />
         <Route path="/lien-he" element={<Home />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

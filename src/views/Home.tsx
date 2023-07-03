@@ -10,6 +10,7 @@ import CoPresentIcon from "@mui/icons-material/CoPresent";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import About from "../components/Main/About";
 import Service from "../components/Main/Service/Service";
+import ChooseUs from "../components/Main/ChooseUs";
 
 const BgImgStyle = styled("img")(({ theme }) => ({
   width: "100%",
@@ -78,6 +79,22 @@ function home() {
           />
         </Box>
         <Service />
+      </Box>
+      <Box sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "-20%",
+            left: "-20%",
+            zIndex: "0",
+          }}
+        >
+          <BgImgStyle
+            src="/assets/img/background/dark-mode-gradient.svg"
+            alt=""
+          />
+        </Box>
+        <ChooseUs />
       </Box>
     </Layout>
   );

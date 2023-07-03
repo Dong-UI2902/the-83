@@ -13,13 +13,18 @@ const LogoHeader = styled("label")(({ theme }) => ({
 }));
 
 const ImageLogoHeader = styled("img")(({ theme }) => ({
-  maxWidth: "100px",
+  maxWidth: "110px",
   display: "block",
   margin: "0 auto",
+  background: "#fff",
+  padding: 10,
+  borderRadius: 10,
+  boxShadow:
+    "0 2px 8px 2px rgb(104 112 118 / 0.07), 0 2px 4px -1px rgb(104 112 118 / 0.04)",
 }));
 
 ImageLogoHeader.defaultProps = {
-  src: "/assets/img/black-logo.png",
+  src: "/assets/img/blue-logo.png",
 };
 
 function Header() {
