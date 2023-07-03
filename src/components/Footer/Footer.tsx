@@ -2,6 +2,11 @@ import React from "react";
 import { Box, Container, Grid, Link, styled } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PrintIcon from "@mui/icons-material/Print";
+import BusinessIcon from "@mui/icons-material/Business";
+import PublicIcon from "@mui/icons-material/Public";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const FooterStyles = styled(Box)(({ theme }) => ({
   backgroundColor: "#FFE5F8",
@@ -27,6 +32,15 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   color: "inherit",
   "&:hover": {
     paddingLeft: "10px",
+  },
+  display: "flex",
+  alignItems: "center",
+}));
+
+const LiStyle = styled("li")(({ theme }) => ({
+  "*": {
+    fontSize: 15,
+    marginRight: 5,
   },
 }));
 
@@ -110,14 +124,27 @@ function Footer() {
             <HeaderStyle>Thông tin liên hệ</HeaderStyle>
             <Box>
               <UlStyle>
-                <li>Công ty TNHH Thương Mại The83 Social Media</li>
-                <li>Mã số thuế: 0317902014</li>
-                <li>
+                <LiStyle>
+                  <BusinessIcon />
+                  Công ty TNHH Thương Mại The83 Social Media
+                </LiStyle>
+                <LiStyle>
+                  <PrintIcon />
+                  Mã số thuế: 0317902014
+                </LiStyle>
+                <LiStyle>
+                  <LocationOnIcon />
                   Địa chỉ: F47 KDC Park Riverside, Phường Phú Hữu, Quận 9, Thành
                   phố Hồ Chí Minh
-                </li>
-                <li>Website: https://the83.vn</li>
-                <li>Email: admin@the83.vn</li>
+                </LiStyle>
+                <LiStyle>
+                  <PublicIcon />
+                  Website: https://the83.vn
+                </LiStyle>
+                <LiStyle>
+                  <MailOutlineIcon />
+                  Email: admin@the83.vn
+                </LiStyle>
               </UlStyle>
             </Box>
           </Grid>

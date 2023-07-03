@@ -145,7 +145,7 @@ function Service() {
               className="layer layer-displayed"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1486335223442-a034129506f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=564f090b8a99c189845f2ef71d4f620a&auto=format&fit=crop&w=1350&q=80')",
+                "url('assets/img/services/tiktok-shop.png')",
               }}
               data-scene="1"
             ></div>
@@ -153,7 +153,7 @@ function Service() {
               className="layer"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1522056615691-da7b8106c665?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4f51ed1121800f23da98176659ba7506&auto=format&fit=crop&w=1352&q=80')",
+                "url('assets/img/services/gg-desc.png')",
               }}
               data-scene="2"
             ></div>
