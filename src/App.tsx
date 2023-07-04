@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./styles/breakpoint.scss";
 import { Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Navbar from "./components/Navbar/Navbar";

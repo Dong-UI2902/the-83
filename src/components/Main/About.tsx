@@ -10,15 +10,15 @@ const ImageStyle = styled("img")(({ theme }) => ({
 
 function About() {
   return (
-    <div className="session">
+    <div className="section">
       <Grid container spacing={2} alignItems="center">
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6} className="img-about">
           <ImageStyle
             src="/assets/img/home/dich-vu-thiet-ke-website-my-pham.png"
             alt=""
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h6" gutterBottom>
             About us
           </Typography>

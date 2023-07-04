@@ -63,7 +63,7 @@ function Footer() {
     <FooterStyles sx={{ position: "relative" }}>
       <Container maxWidth="xl">
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <img width={170} src="/assets/img/blue-logo-desc.png" />
             <p>
               Chúng tôi mang đến các Giải pháp Marketing Toàn diện, Ứng dụng
@@ -74,7 +74,7 @@ function Footer() {
               <img width={80} src="/assets/img/dmca_protected_.png" />
             </Box>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} md={2}>
             <HeaderStyle>The83 Social Media</HeaderStyle>
             <UlStyle>
               <li>
@@ -120,7 +120,7 @@ function Footer() {
               </li>
             </UlStyle>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <HeaderStyle>Thông tin liên hệ</HeaderStyle>
             <Box>
               <UlStyle>
@@ -148,7 +148,7 @@ function Footer() {
               </UlStyle>
             </Box>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5400730334595!2d106.83740207576872!3d10.846466057896459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317521af4730391f%3A0xfa0bd6efed6cc3f9!2sS10.06%20Origami%2C%20Vinhomes%20Grandpark!5e0!3m2!1svi!2s!4v1688371182787!5m2!1svi!2s"
               width="100%"
@@ -160,7 +160,7 @@ function Footer() {
             ></iframe>
           </Grid>
         </Grid>
-        <center>
+        <center style={{ marginTop: "50px" }}>
           Copyright 2023 © Công ty TNHH Thương Mại The83 Social Media
         </center>
       </Container>

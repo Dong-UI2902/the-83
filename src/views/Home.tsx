@@ -11,6 +11,7 @@ import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import About from "../components/Main/About";
 import Service from "../components/Main/Service/Service";
 import ChooseUs from "../components/Main/ChooseUs";
+import Confused from "../components/Main/Confused";
 
 const BgImgStyle = styled("img")(({ theme }) => ({
   width: "100%",
@@ -25,8 +26,8 @@ function home() {
         <BgHeader />
         <Header />
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item xs={11} md={3}>
               <CardUi
                 icon={<EmojiObjectsIcon />}
                 title="Giải pháp toàn diện"
@@ -35,7 +36,7 @@ function home() {
                 }
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={11} md={3}>
               <CardUi
                 icon={<SettingsIcon />}
                 title="Công cụ hỗ trợ mạnh mẽ"
@@ -44,7 +45,7 @@ function home() {
                 }
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={11} md={3}>
               <CardUi
                 icon={<CurrencyExchangeIcon />}
                 title="Tối ưu hoá chi phí – lợi nhuận"
@@ -53,7 +54,7 @@ function home() {
                 }
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={11} md={3}>
               <CardUi
                 icon={<CoPresentIcon />}
                 title="Đội ngũ chuyên môn cao"
@@ -65,7 +66,7 @@ function home() {
           </Grid>
         </Box>
         <About />
-        <Box sx={{ position: "relative" }}>
+        <Box sx={{ position: "relative", overflowX: "hidden" }}>
           <Box
             sx={{
               position: "absolute",
@@ -97,6 +98,7 @@ function home() {
           </Box>
           <ChooseUs />
         </Box>
+        <Confused />
       </Layout>
     </div>
   );

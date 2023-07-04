@@ -42,9 +42,9 @@ const List = [
 
 function ChooseUs() {
   return (
-    <div className="session">
+    <div className="section">
       <Grid container alignItems="center">
-        <Grid xs={5}>
+        <Grid xs={12} md={5}>
           <h1 className="title" style={{ textAlign: "start" }}>
             <span style={{ fontSize: "2rem" }}>Tại sao nên chọn</span>
             <br />
@@ -58,7 +58,7 @@ function ChooseUs() {
               The83 Social Media
             </span>
           </h1>
-          <Box maxWidth={"90%"}>
+          <Box maxWidth={"90%"} margin="0 auto">
             <p className="session-desc">
               Là chuyên gia tư vấn chiến lược xây dựng thương hiệu trên Internet
             </p>
@@ -73,10 +73,18 @@ function ChooseUs() {
             </p>
           </Box>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={12} md={7}>
           <Grid container spacing={2}>
             {List.map((item, index) => (
-              <Grid item xs={6} md={4} key={index}>
+              <Grid
+                item
+                xs={11}
+                sm={6}
+                md={4}
+                key={index}
+                justifyContent="center"
+                margin="0 auto"
+              >
                 <CardUi icon={item.icon} title={item.title} desc={item.desc} />
               </Grid>
             ))}

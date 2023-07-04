@@ -29,7 +29,10 @@ ImageLogoHeader.defaultProps = {
 
 function Header() {
   return (
-    <Box sx={{ zIndex: 0, position: "relative", height: "80vh" }}>
+    <Box
+      sx={{ zIndex: 0, position: "relative", height: "80vh" }}
+      className="header"
+    >
       <Particle />
       <Grid
         container
@@ -39,7 +42,7 @@ function Header() {
         position={"relative"}
         height={"100%"}
       >
-        <Grid item xs={7}>
+        <Grid item xs={12} md={7}>
           <Typography variant="h3" gutterBottom>
             <LogoHeader className="text-transt-color">The83</LogoHeader> Social
             Media
@@ -48,7 +51,7 @@ function Header() {
             Giải Pháp Kinh Doanh Thời Đại Số
           </Typography>
         </Grid>
-        <Grid item xs={5} position="relative">
+        <Grid className="logos-header" item xs={12} md={5} position="relative">
           <ImageLogoHeader className="main-img" />
           {/* <img className="img-header" src="/assets/img/home/ipad.png" />
           

@@ -5,7 +5,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 function Service() {
   return (
-    <div className="session service">
+    <div className="section service">
       <Box
         sx={{
           position: "relative",
@@ -39,10 +39,10 @@ function Service() {
         </Box>
         <Box maxWidth="1200px" margin="50px auto 0 auto">
           <Grid container spacing={2} alignItems="center">
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <img width="100%" src="/assets/img/services/thiet-ke-web.jpg" />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <Typography
                 variant="h4"
                 gutterBottom
