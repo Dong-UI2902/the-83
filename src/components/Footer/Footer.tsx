@@ -9,10 +9,13 @@ import PublicIcon from "@mui/icons-material/Public";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const FooterStyles = styled(Box)(({ theme }) => ({
-  backgroundColor: "#FFE5F8",
+  backgroundColor: "#FF4F7E",
   marginTop: "50px",
   paddingTop: "50px",
   paddingBottom: "20px",
+  "*": {
+    color: "#fff!important",
+  },
 }));
 
 const HeaderStyle = styled("div")(({ theme }) => ({
