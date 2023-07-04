@@ -66,7 +66,7 @@ function home() {
           </Grid>
         </Box>
         <About />
-        <Box sx={{ position: "relative", overflowX: "hidden" }}>
+        <Box sx={{ position: "relative" }}>
           <Box
             sx={{
               position: "absolute",
