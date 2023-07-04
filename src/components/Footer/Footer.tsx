@@ -168,7 +168,8 @@ function Footer() {
       </Container>
       <center style={{ marginTop: "30px" }}>
         <Divider style={{ marginBottom: "20px" }}></Divider>
-        Copyright 2023 © Công ty TNHH Thương Mại The83 Social Media
+        Copyright © {new Date().getFullYear()} Công ty TNHH Thương Mại The83
+        Social Media
       </center>
     </FooterStyles>
   );
