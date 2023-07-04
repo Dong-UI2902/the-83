@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Link, styled } from "@mui/material";
+import { Box, Container, Divider, Grid, Link, styled } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -11,7 +11,8 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 const FooterStyles = styled(Box)(({ theme }) => ({
   backgroundColor: "#FFE5F8",
   marginTop: "50px",
-  padding: "50px 0",
+  paddingTop: "50px",
+  paddingBottom: "20px",
 }));
 
 const HeaderStyle = styled("div")(({ theme }) => ({
@@ -64,7 +65,11 @@ function Footer() {
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
-            <img width={170} src="/assets/img/blue-logo-desc.png" />
+            <img
+              style={{ display: "block", margin: "0 auto" }}
+              width={170}
+              src="/assets/img/blue-logo-desc.png"
+            />
             <p>
               Chúng tôi mang đến các Giải pháp Marketing Toàn diện, Ứng dụng
               Chuyên sâu trong công nghệ của thời đại kỹ thuật số 4,0.
@@ -130,20 +135,20 @@ function Footer() {
                 </LiStyle>
                 <LiStyle>
                   <PrintIcon />
-                  Mã số thuế: 0317902014
+                  0317902014
                 </LiStyle>
                 <LiStyle>
                   <LocationOnIcon />
-                  Địa chỉ: F47 KDC Park Riverside, Phường Phú Hữu, Quận 9, Thành
-                  phố Hồ Chí Minh
+                  F47 KDC Park Riverside, Phường Phú Hữu, Quận 9, Thành phố Hồ
+                  Chí Minh
                 </LiStyle>
                 <LiStyle>
                   <PublicIcon />
-                  Website: https://the83.vn
+                  https://the83.vn
                 </LiStyle>
                 <LiStyle>
                   <MailOutlineIcon />
-                  Email: admin@the83.vn
+                  admin@the83.vn
                 </LiStyle>
               </UlStyle>
             </Box>
@@ -160,10 +165,11 @@ function Footer() {
             ></iframe>
           </Grid>
         </Grid>
-        <center style={{ marginTop: "50px" }}>
-          Copyright 2023 © Công ty TNHH Thương Mại The83 Social Media
-        </center>
       </Container>
+      <center style={{ marginTop: "30px" }}>
+        <Divider style={{ marginBottom: "20px" }}></Divider>
+        Copyright 2023 © Công ty TNHH Thương Mại The83 Social Media
+      </center>
     </FooterStyles>
   );
 }
