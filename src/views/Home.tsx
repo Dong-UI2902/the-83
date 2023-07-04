@@ -70,8 +70,8 @@ function home() {
           <Box
             sx={{
               position: "absolute",
-              top: "-25%",
-              right: "-25%",
+              top: { xs: "-15%", md: "-25%" },
+              right: { xs: "0", md: "-25%" },
               zIndex: "0",
             }}
           >
