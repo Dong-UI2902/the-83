@@ -129,7 +129,14 @@ export default function PersistentDrawerLeft() {
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
-                sx={{ mr: 2, display: { xs: "block", sm: "none" } }}
+                sx={{
+                  mr: 2,
+                  display: {
+                    xs: "block",
+                    sm: "none",
+                    color: "var(--dark-color)",
+                  },
+                }}
               >
                 <MenuIcon />
               </IconButton>
@@ -142,7 +149,8 @@ export default function PersistentDrawerLeft() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  maxWidth: "50px",
+                  maxWidth: { xs: "35px", sm: "50px" },
+                  marginRight: "auto",
                 }}
               >
                 <img width={"100%"} src="/assets/img/blue-logo.png" />
