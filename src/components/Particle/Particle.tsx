@@ -76,7 +76,7 @@ function Particle() {
               enable: true,
               area: 500,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
             value: 0.5,
