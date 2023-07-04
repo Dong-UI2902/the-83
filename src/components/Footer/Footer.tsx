@@ -77,7 +77,7 @@ function Footer() {
               <img
                 style={{ display: "block", margin: "0 auto" }}
                 width={170}
-                src="/assets/img/blue-logo-desc.png"
+                src="/assets/img/pink-logo.png"
               />
               <p>
                 Chúng tôi mang đến các Giải pháp Marketing Toàn diện, Ứng dụng
