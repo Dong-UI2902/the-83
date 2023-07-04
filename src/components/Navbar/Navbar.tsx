@@ -22,6 +22,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "../Link/Link";
 import Layout from "../Layout/Layout";
+import { useLocation, useParams } from "react-router-dom";
 
 const drawerWidth = 270;
 
@@ -117,6 +118,12 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
+  const location = useLocation();
+
+  const checkRoute = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -153,7 +160,7 @@ export default function PersistentDrawerLeft() {
                   marginRight: "auto",
                 }}
               >
-                <img width={"100%"} src="/assets/img/pink-logo.png" />
+                <img width={"100%"} src="/assets/img/pink-no-desc.png" />
               </Typography>
               <Box
                 sx={{
@@ -165,8 +172,17 @@ export default function PersistentDrawerLeft() {
                 {navItems.map((item, index) => (
                   <Link
                     key={index}
-                    sx={{ color: "var(--dark-color)" }}
+                    sx={{
+                      fontWeight: "500",
+                      fontSize: "1.2rem",
+                      color: "var(--dark-color)",
+                      "&.active": {
+                        borderBottom: "4px solid rgb(178, 73, 248)",
+                        fontWeight: "700",
+                      },
+                    }}
                     href={item.href}
+                    className={checkRoute(item.href) ? "active" : ""}
                   >
                     {item.name}
                   </Link>
