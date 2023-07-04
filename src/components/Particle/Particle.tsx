@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
-import { Box } from "@mui/material";
 
 function Particle() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -77,7 +76,7 @@ function Particle() {
               enable: true,
               area: 500,
             },
-            value: 30,
+            value: 50,
           },
           opacity: {
             value: 0.5,
