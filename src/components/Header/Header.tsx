@@ -24,7 +24,7 @@ const ImageLogoHeader = styled("img")(({ theme }) => ({
 }));
 
 ImageLogoHeader.defaultProps = {
-  src: "/assets/img/blue-logo.png",
+  src: "/assets/img/pink-logo.png",
 };
 
 function Header() {

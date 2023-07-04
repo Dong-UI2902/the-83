@@ -153,7 +153,7 @@ export default function PersistentDrawerLeft() {
                   marginRight: "auto",
                 }}
               >
-                <img width={"100%"} src="/assets/img/blue-logo.png" />
+                <img width={"100%"} src="/assets/img/pink-logo.png" />
               </Typography>
               <Box
                 sx={{
