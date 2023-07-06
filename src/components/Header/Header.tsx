@@ -7,8 +7,7 @@ import Grid from "@mui/material/Grid";
 
 const LogoHeader = styled("label")(({ theme }) => ({
   fontSize: "8rem",
-  backgroundImage:
-    "linear-gradient(rgb(255, 28, 247) 25%, rgb(178, 73, 248) 100%)",
+  backgroundImage: "linear-gradient(rgb(255, 28, 247) 25%, #5A54F7 100%)",
   fontWeight: 700,
 }));
 
@@ -44,7 +43,7 @@ function Header() {
       >
         <Grid item xs={12} md={7}>
           <Typography variant="h3" gutterBottom>
-            <LogoHeader className="text-transt-color">The83</LogoHeader> Social
+            <LogoHeader className="text-trans-color">The83</LogoHeader> Social
             Media
           </Typography>
           <Typography variant="h4" gutterBottom>

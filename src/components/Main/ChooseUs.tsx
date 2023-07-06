@@ -53,7 +53,7 @@ function ChooseUs() {
                 backgroundImage:
                   "linear-gradient(rgb(255, 78, 205) 25%, rgb(242, 19, 97) 100%)",
               }}
-              className="text-transt-color"
+              className="text-trans-color"
             >
               The83 Social Media
             </span>

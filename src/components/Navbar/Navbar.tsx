@@ -22,7 +22,11 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "../Link/Link";
 import Layout from "../Layout/Layout";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import { Button, Menu, MenuItem } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const drawerWidth = 270;
 
@@ -106,6 +110,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   fontFamily: "inherit",
 }));
 
+const IconStyle = {
+  alignItems: "center",
+  maxWidth: { xs: "35px", sm: "50px" },
+  margin: "0 5px",
+  color: "#889096",
+  "&:hover": {
+    color: "var(--dark-color)",
+  },
+  display: {
+    xs: "none",
+    md: "flex",
+  },
+};
+
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -122,6 +140,15 @@ export default function PersistentDrawerLeft() {
 
   const checkRoute = (path: string) => {
     return location.pathname === path;
+  };
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const openMenu = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -169,34 +196,154 @@ export default function PersistentDrawerLeft() {
                   marginRight: "auto",
                 }}
               >
-                {navItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    sx={{
-                      fontWeight: "500",
-                      fontSize: "1.2rem",
-                      color: "var(--dark-color)",
-                      "&.active": {
-                        borderBottom: "4px solid rgb(178, 73, 248)",
-                        fontWeight: "700",
-                      },
-                    }}
-                    href={item.href}
-                    className={checkRoute(item.href) ? "active" : ""}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {navItems.map((item, index) => {
+                  if (item.href === "/dich-vu") {
+                    return (
+                      <>
+                        <Button
+                          key={index}
+                          id="basic-button"
+                          aria-controls={openMenu ? "basic-menu" : undefined}
+                          aria-haspopup="true"
+                          aria-expanded={openMenu ? "true" : undefined}
+                          onClick={handleClick}
+                          sx={{
+                            fontWeight: "500",
+                            fontSize: "1.2rem",
+                            color: "var(--dark-color)",
+                            "&.active": {
+                              borderBottom: "4px solid rgb(178, 73, 248)",
+                              fontWeight: "700",
+                            },
+                            textTransform: "unset",
+                            paddingBottom: "10px",
+                          }}
+                          endIcon={<KeyboardArrowDownIcon />}
+                        >
+                          {item.name}
+                        </Button>
+                        <Menu
+                          id="basic-menu"
+                          anchorEl={anchorEl}
+                          open={openMenu}
+                          onClose={handleClose}
+                          MenuListProps={{
+                            "aria-labelledby": "basic-button",
+                          }}
+                        >
+                          <MenuItem onClick={handleClose}>
+                            <Link
+                              sx={{
+                                color: "var(--dark-color)",
+                                padding: 0,
+                                width: "100%",
+                                "&.active": {
+                                  borderBottom: "4px solid rgb(178, 73, 248)",
+                                },
+                              }}
+                              href={"dich-vu-ads"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Dịch vụ quảng cáo Online
+                            </Link>
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            Thiết kế, chăm sóc website, landing page
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            Thiết kế hình ảnh, video
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            Tư vấn chiến lược Marketing Online
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            Xây dựng bộ nhận diện thương hiệu
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            Tìm nguồn hàng phát triển hệ thống kinh doanh
+                          </MenuItem>
+                        </Menu>
+                      </>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={index}
+                      sx={{
+                        fontWeight: "500",
+                        fontSize: "1.2rem",
+                        color: "var(--dark-color)",
+                        "&.active": {
+                          borderBottom: "4px solid rgb(178, 73, 248)",
+                          fontWeight: "700",
+                        },
+                      }}
+                      href={item.href}
+                      className={checkRoute(item.href) ? "active" : ""}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
               </Box>
-              <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search…"
-                  inputProps={{ "aria-label": "search" }}
-                />
-              </Search>
+              <Box sx={{ display: "flex" }}>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={IconStyle}
+                >
+                  <FacebookIcon />
+                </Typography>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={IconStyle}
+                >
+                  <InstagramIcon />
+                </Typography>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={IconStyle}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="bi bi-tiktok"
+                    viewBox="0 0 18 16"
+                    style={{
+                      border: "2px solid #889096",
+                      borderRadius: "5px",
+                      padding: "2px",
+                    }}
+                  >
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"></path>
+                  </svg>
+                </Typography>
+                <Search>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ "aria-label": "search" }}
+                  />
+                </Search>
+              </Box>
             </Toolbar>
           </Layout>
         </AppBar>

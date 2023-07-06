@@ -19,7 +19,7 @@ function Service() {
               backgroundImage:
                 "linear-gradient(rgb(243, 101, 52) 25%, rgb(246, 159, 39) 100%)",
             }}
-            className="text-transt-color"
+            className="text-trans-color"
           >
             dịch vụ
           </span>{" "}
@@ -29,7 +29,7 @@ function Service() {
               backgroundImage:
                 "linear-gradient(rgb(255, 78, 205) 25%, rgb(242, 19, 97) 100%)",
             }}
-            className="text-transt-color"
+            className="text-trans-color"
           >
             The83
           </span>

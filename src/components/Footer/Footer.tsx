@@ -3,10 +3,10 @@ import { Box, Container, Divider, Grid, Link, styled } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PrintIcon from "@mui/icons-material/Print";
 import BusinessIcon from "@mui/icons-material/Business";
 import PublicIcon from "@mui/icons-material/Public";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const FooterStyles = styled(Box)(({ theme }) => ({
   backgroundColor: "#FFFAFA",
@@ -143,28 +143,29 @@ function Footer() {
                     Công ty TNHH Thương Mại The83 Social Media
                   </LiStyle>
                   <LiStyle>
-                    <PrintIcon />
-                    0317902014
+                    <LocationOnIcon />
+                    Trụ sở chính: F47 KDC Park Riverside, Phường Phú Hữu, Quận
+                    9, Thành phố Hồ Chí Minh
                   </LiStyle>
                   <LiStyle>
                     <LocationOnIcon />
-                    F47 KDC Park Riverside, Phường Phú Hữu, Quận 9, Thành phố Hồ
-                    Chí Minh
-                  </LiStyle>
-                  <LiStyle>
-                    <PublicIcon />
-                    https://the83.vn
+                    Văn phòng: S10.05 Vinhome Grand Park, P.Phước Long, TP.Thủ
+                    Đức, TP.Hồ Chí Minh
                   </LiStyle>
                   <LiStyle>
                     <MailOutlineIcon />
-                    admin@the83.vn
+                    Sale@The83.vn The83sm@gmail.com
+                  </LiStyle>
+                  <LiStyle>
+                    <PhoneIcon />
+                    Hotline: 0924 620 620
                   </LiStyle>
                 </UlStyle>
               </Box>
             </Grid>
             <Grid item xs={12} md={4}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.5705808306584!2d106.80041288018388!3d10.807321394698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527e3578d0ea3%3A0xc2bb96b6bbebb172!2sF48%20Park%20Riverside!5e0!3m2!1svi!2sus!4v1688463964215!5m2!1svi!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.055339106592!2d106.7983193757685!3d10.807073658626203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527f6d34cb91f%3A0x5068df3768af1beb!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBN4bqhaSBUaGU4MyBTb2NpYWwgTWVkaWE!5e0!3m2!1svi!2s!4v1688533516376!5m2!1svi!2s"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -177,8 +178,8 @@ function Footer() {
         </Container>
         <center style={{ marginTop: "30px" }}>
           <Divider style={{ marginBottom: "20px" }}></Divider>
-          Copyright © {new Date().getFullYear()} Công ty TNHH Thương Mại The83
-          Social Media
+          Copyright © {new Date().getFullYear()} THE83 SOCIAL MEDIA TRADING CO.,
+          LTD
         </center>
       </Box>
     </FooterStyles>

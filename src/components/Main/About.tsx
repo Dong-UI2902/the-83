@@ -31,7 +31,7 @@ function About() {
                 "linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%)",
               fontWeight: 600,
             }}
-            className="text-transt-color"
+            className="text-trans-color"
           >
             The83
             <Divider />
