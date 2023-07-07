@@ -110,6 +110,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   fontFamily: "inherit",
 }));
 
+const LinkStyle = styled(Link)(({ theme }) => ({
+  color: "var(--dark-color)",
+  padding: 0,
+  width: "100%",
+  "&.active": {
+    borderBottom: "4px solid rgb(178, 73, 248)",
+  },
+}));
+
 const IconStyle = {
   alignItems: "center",
   maxWidth: { xs: "35px", sm: "50px" },
@@ -231,24 +240,21 @@ export default function PersistentDrawerLeft() {
                           }}
                         >
                           <MenuItem onClick={handleClose}>
-                            <Link
-                              sx={{
-                                color: "var(--dark-color)",
-                                padding: 0,
-                                width: "100%",
-                                "&.active": {
-                                  borderBottom: "4px solid rgb(178, 73, 248)",
-                                },
-                              }}
+                            <LinkStyle
                               href={"dich-vu-ads"}
                               className={checkRoute(item.href) ? "active" : ""}
                             >
                               Dịch vụ quảng cáo Online
-                            </Link>
+                            </LinkStyle>
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
-                            Thiết kế, chăm sóc website, landing page
+                            <LinkStyle
+                              href={"dich-vu-webdesign"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Thiết kế, chăm sóc website, landing page
+                            </LinkStyle>
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>

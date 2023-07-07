@@ -61,7 +61,12 @@ function Facebook() {
             </Grid>
           </Grid>
         </Box>
-        <ListCard list={ItemList} />
+        <Box className="section" maxWidth={1204} ml={"auto"} mr={"auto"}>
+          <center>
+            <h1>Đạt được các kết quả quan trọng với doanh nghiệp bạn.</h1>
+          </center>
+          <ListCard list={ItemList} />
+        </Box>
         <FormRegister />
       </Layout>
     </div>
