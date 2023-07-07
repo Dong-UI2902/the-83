@@ -64,7 +64,7 @@ const itemData = [
 function About() {
   return (
     <div>
-      <BgHeaderStyle url={"/assets/img/about/bg-header.jpg"} />
+      <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
       <Layout
         props={{
           padding: { md: "50px!important" },
