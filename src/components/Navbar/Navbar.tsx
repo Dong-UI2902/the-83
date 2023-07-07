@@ -258,7 +258,12 @@ export default function PersistentDrawerLeft() {
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
-                            Thiết kế hình ảnh, video
+                            <LinkStyle
+                              href={"dich-vu-editor"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Thiết kế hình ảnh, video
+                            </LinkStyle>
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
