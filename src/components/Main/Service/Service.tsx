@@ -21,7 +21,7 @@ function Service() {
             }}
             className="text-trans-color"
           >
-            dịch vụ
+            dịch vụ nổi bật
           </span>{" "}
           tại{" "}
           <span

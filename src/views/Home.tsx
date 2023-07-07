@@ -12,12 +12,34 @@ import About from "../components/Main/About";
 import Service from "../components/Main/Service/Service";
 import ChooseUs from "../components/Main/ChooseUs";
 import Confused from "../components/Main/Confused";
+import ListServices from "../components/Service/ListServices";
+import StepperService from "../components/Service/StepperService";
+import FormRegister from "../components/FormRegister/FormRegister";
 
 const BgImgStyle = styled("img")(({ theme }) => ({
   width: "100%",
   display: "block",
   margin: "0 auto",
 }));
+
+const itemData = [
+  {
+    img: "/assets/img/about/5.jpg",
+    title: "Dịch vụ tư vấn chiến lược Marketing Online tổng thể",
+  },
+  {
+    img: "/assets/img/about/11.jpg",
+    title: "Thiết kế hình ảnh, video ",
+  },
+  {
+    img: "/assets/img/about/3.jpg",
+    title: "Đào tạo các khóa học Ads",
+  },
+  {
+    img: "/assets/img/about/13.jpg",
+    title: "Hổ trợ tìm nguồn hàng phát triển hệ thống kinh doanh.",
+  },
+];
 
 function home() {
   return (
@@ -92,13 +114,56 @@ function home() {
             }}
           >
             <BgImgStyle
+              src="/assets/img/background/customization-gradient.svg"
+              alt=""
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "35%",
+              right: "-35%",
+              zIndex: "0",
+            }}
+          >
+            <BgImgStyle src="/assets/img/confused/map-new.png" alt="" />
+          </Box>
+          <Confused />
+        </Box>
+        <Box sx={{ position: "relative" }}>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "-20%",
+              right: "-20%",
+              zIndex: "0",
+            }}
+          >
+            <BgImgStyle
               src="/assets/img/background/dark-mode-gradient.svg"
               alt=""
             />
           </Box>
           <ChooseUs />
         </Box>
-        <Confused />
+        <StepperService />
+        <Box className="section" sx={{ display: { md: "block", xs: "none" } }}>
+          <h1 className="title" style={{ textAlign: "start" }}>
+            <span style={{ fontSize: "2rem" }}>Tại sao nên chọn</span>
+            <br />
+            <span
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgb(255, 78, 205) 25%, rgb(242, 19, 97) 100%)",
+              }}
+              className="text-trans-color"
+            >
+              The83 Social Media
+            </span>
+          </h1>
+          <ListServices itemData={itemData} />
+        </Box>
+        <FormRegister />
       </Layout>
     </div>
   );

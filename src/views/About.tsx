@@ -1,26 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
-import {
-  Box,
-  Card,
-  Grid,
-  IconButton,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  Link,
-  Paper,
-  styled,
-} from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import { Box, Grid, styled } from "@mui/material";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
-import Carousel from "react-material-ui-carousel";
 import CardUi from "../components/Main/CardUi";
 import SettingsIcon from "@mui/icons-material/Settings";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import BgHeaderStyle from "../components/BgHeader/BgHeaderStyle";
+import ListServices from "../components/Service/ListServices";
 
 const itemData = [
   {
@@ -73,83 +61,7 @@ const itemData = [
   },
 ];
 
-const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.common.white,
-    color: "rgba(0, 0, 0, 0.87)",
-    boxShadow: theme.shadows[1],
-    fontSize: 11,
-  },
-}));
-
 function About() {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 768;
-
-  const sliderItems: number = itemData.length > 2 ? 2 : itemData.length;
-  const items: Array<any> = [];
-
-  for (let i = 0; i < itemData.length; i += sliderItems) {
-    if (i % sliderItems === 0) {
-      items.push(
-        <Card raised className="Banner" key={i.toString()}>
-          <Grid container spacing={0} className="BannerGrid">
-            {itemData.slice(i, i + sliderItems).map((item, index) => {
-              return (
-                <Grid item xs={6} key={i}>
-                  <ImageListItem>
-                    <img
-                      src={`${item.img}?w=248&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
-                      loading="lazy"
-                    />
-                    <ImageListItemBar
-                      title={
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{
-                            color: "var(--light-color)",
-                            display: "-webkit-box",
-                            WebkitLineClamp: "2!important",
-                          }}
-                        >
-                          {item.title}
-                        </Link>
-                      }
-                      actionIcon={
-                        <IconButton
-                          sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                          aria-label={`info about ${item.title}`}
-                        >
-                          <InfoIcon />
-                        </IconButton>
-                      }
-                    />
-                  </ImageListItem>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Card>
-      );
-    }
-  }
-
   return (
     <div>
       <BgHeaderStyle url={"/assets/img/about/bg-header.jpg"} />
@@ -349,51 +261,7 @@ function About() {
             </Grid>
           </Grid>
         </Box>
-        <Box className="section" sx={{ display: { md: "block", xs: "none" } }}>
-          <ImageList cols={isMobile ? 2 : 4}>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-                <ImageListItemBar
-                  title={
-                    <LightTooltip title={item.title} placement="top">
-                      <Link
-                        href="#"
-                        underline="none"
-                        sx={{ color: "var(--light-color)" }}
-                      >
-                        {item.title}
-                      </Link>
-                    </LightTooltip>
-                  }
-                  actionIcon={
-                    <IconButton
-                      sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                      aria-label={`info about ${item.title}`}
-                    >
-                      <InfoIcon />
-                    </IconButton>
-                  }
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Box>
-        <Box sx={{ display: { md: "none", xs: "block" } }}>
-          <Carousel
-            animation="slide"
-            autoPlay={true}
-            cycleNavigation
-            interval={3000}
-          >
-            {items}
-          </Carousel>
-        </Box>
+        <ListServices itemData={itemData} />
       </Layout>
     </div>
   );

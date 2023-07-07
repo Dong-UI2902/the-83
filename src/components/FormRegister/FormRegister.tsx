@@ -73,8 +73,8 @@ function FormRegister() {
               ))}
             </ImageList>
           </Grid>
-          <Grid item md={4}>
-            <h1 style={{ margin: 0 }}>Đăng ký ngay hôm nay!</h1>
+          <Grid item md={5}>
+            <h1 style={{ margin: 0 }}>Tư vấn & Báo giá dịch vụ!</h1>
             <form>
               <TextInput label="Họ và tên" />
               <TextInput label="Điện thoại" />
