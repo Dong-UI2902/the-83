@@ -1,19 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Avatar from "@mui/material/Avatar";
+import { Link } from "react-router-dom";
+import { Box, styled } from "@mui/material";
+
+const SlideLinkStyle = styled(Link)(({ theme }) => ({
+  padding: "10px 15px",
+  background: "#1565C0",
+  boxShadow:
+    "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
+  color: "var(--light-color)",
+  textDecoration: "none",
+  fontWeight: 600,
+  borderRadius: "5px",
+  display: "block",
+  maxWidth: "150px",
+  textAlign: "center",
+  margin: "0 auto",
+}));
 
 function Service() {
-  let sliderIndex = 1;
   let timeout;
   
   let layers = [];
   let covers = [];
 
+  const [sliderIndex, setSlideIndex] = useState(1);
+
   useEffect(() => {
     layers = [...document.querySelectorAll(".layer")];
     covers = [...document.querySelectorAll(".photo-frame")];
-  }, []);
+  }, [sliderIndex]);
 
 
   function changeCoverAnimState(state = 0) {
@@ -24,25 +42,44 @@ function Service() {
     });
   }
 
-  function switchLayer(step = 1) {
-    const nextSlide =
-      (sliderIndex + step) % 3 === 0 ? 3 : (sliderIndex + step) % 3;
-    changeCoverAnimState(1);
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      changeCoverAnimState(0);
-    }, 500);
+  const goToNewSlide = (newSlide) => {
+    if (newSlide === 0) {
+      newSlide = 4;
+    } else if (newSlide === 5) {
+      newSlide = 1;
+    }
     for (const i of layers) {
       i.classList.remove("layer-displayed");
       i.classList.remove("layer-displayed-exit");
-      if (i.dataset.scene == nextSlide) {
+      if (i.dataset.scene == newSlide) {
         i.classList.add("layer-displayed");
       }
       if (i.dataset.scene == sliderIndex) {
         i.classList.add("layer-displayed-exit");
       }
     }
-    sliderIndex = nextSlide;
+    setSlideIndex(newSlide);
+  };
+
+  function switchNext() {
+    console.log("next");
+    const nextSlide = sliderIndex + 1;
+    changeCoverAnimState(1);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      changeCoverAnimState(0);
+    }, 500);
+    goToNewSlide(nextSlide);
+  }
+
+  function switchBack() {
+    const nextSlide = sliderIndex - 1;
+    changeCoverAnimState(1);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      changeCoverAnimState(0);
+    }, 500);
+    goToNewSlide(nextSlide);
   }
 
   return (
@@ -60,6 +97,9 @@ function Service() {
                   "url('/assets/img/services/icon-tiktok.png')",
                 }}
               ></div>
+              <Box sx={{ marginTop: "10px" }}>
+                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/tiktok"}>Xem thêm</SlideLinkStyle>
+              </Box>
             </div>
             <div className="layer" data-scene="2">
               <span>Google Ads</span>
@@ -70,6 +110,9 @@ function Service() {
                     "url('/assets/img/services/icon-gg.png')",
                 }}
               ></div>
+              <Box sx={{ marginTop: "10px" }}>
+                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/google"}>Xem thêm</SlideLinkStyle>
+              </Box>
             </div>
             <div className="layer" data-scene="3">
               <span>Facebook Ads</span>
@@ -80,14 +123,30 @@ function Service() {
                   "url('/assets/img/services/icon-fb.png')",
                 }}
               ></div>
+              <Box sx={{ marginTop: "10px" }}>
+                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/facebook"}>Xem thêm</SlideLinkStyle>
+              </Box>
+            </div>
+            <div className="layer" data-scene="4">
+              <span>YouTube Ads</span>
+              <div
+                className="layer__image"
+                style={{
+                  backgroundImage:
+                  "url('/assets/img/services/icon-youtube.webp')",
+                }}
+              ></div>
+              <Box sx={{ marginTop: "10px" }}>
+                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/youtube"}>Xem thêm</SlideLinkStyle>
+              </Box>
             </div>
           </div>
-          <button onClick={() => switchLayer(2)}>
+          <button onClick={() => switchNext()}>
             <Avatar>
               <ArrowBackIosIcon />
             </Avatar>
           </button>
-          <button onClick={() => switchLayer()}>
+          <button onClick={() => switchBack()}>
             <Avatar>
               <ArrowForwardIosIcon />
             </Avatar>
@@ -97,6 +156,7 @@ function Service() {
           <div className="layer layer-displayed" data-scene="1"></div>
           <div className="layer" data-scene="2"></div>
           <div className="layer" data-scene="3"></div>
+          <div className="layer" data-scene="4"></div>
           {/* <div className="photo-frame">
             <div
               className="layer layer-displayed"
@@ -164,6 +224,14 @@ function Service() {
                   "url('assets/img/services/fb-desc.webp')",
               }}
               data-scene="3"
+            ></div>
+            <div
+              className="layer"
+              style={{
+                backgroundImage:
+                  "url('assets/img/services/youtube/2.svg')",
+              }}
+              data-scene="4"
             ></div>
             <div className="cover"></div>
           </div>

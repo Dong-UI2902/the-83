@@ -199,9 +199,8 @@ export default function PersistentDrawerLeft() {
                 {navItems.map((item, index) => {
                   if (item.href === "/dich-vu") {
                     return (
-                      <>
+                      <label key={item.name}>
                         <Button
-                          key={index}
                           id="basic-button"
                           aria-controls={openMenu ? "basic-menu" : undefined}
                           aria-haspopup="true"
@@ -268,7 +267,7 @@ export default function PersistentDrawerLeft() {
                             Tìm nguồn hàng phát triển hệ thống kinh doanh
                           </MenuItem>
                         </Menu>
-                      </>
+                      </label>
                     );
                   }
 

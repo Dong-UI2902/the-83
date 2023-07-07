@@ -44,7 +44,7 @@ function ChooseUs() {
   return (
     <div className="section">
       <Grid container alignItems="center">
-        <Grid xs={12} md={5}>
+        <Grid item xs={12} md={5}>
           <h1 className="title" style={{ textAlign: "start" }}>
             <span style={{ fontSize: "2rem" }}>Tại sao nên chọn</span>
             <br />

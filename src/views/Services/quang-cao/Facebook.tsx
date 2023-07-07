@@ -1,16 +1,8 @@
 import React from "react";
 import Layout from "../../../components/Layout/Layout";
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-  styled,
-} from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import FormRegister from "../../../components/FormRegister/FormRegister";
+import ListCard from "./ListCard";
 
 function Facebook() {
   return (
@@ -69,26 +61,7 @@ function Facebook() {
             </Grid>
           </Grid>
         </Box>
-        <Box className="section" maxWidth={1204} ml={"auto"} mr={"auto"}>
-          <center>
-            <h1>Đạt được các kết quả quan trọng với doanh nghiệp bạn.</h1>
-          </center>
-          <Grid container spacing={4}>
-            {ItemList.map((item, index) => (
-              <Grid item md={4} key={index}>
-                <Card variant="outlined" sx={{ height: "100%" }}>
-                  <CardContent>
-                    <img width={50} src={item.url} />
-                    <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
-                      {item.name}
-                    </Typography>
-                    <p>{item.desc}</p>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        <ListCard list={ItemList} />
         <FormRegister />
       </Layout>
     </div>
@@ -99,32 +72,32 @@ const ItemList = [
   {
     name: "Tăng doanh số online",
     desc: "Thúc đẩy lượt mua trên trang web, Facebook hoặc Instagram của bạn.",
-    url: "/assets/img/services/fb/1.webp",
+    icon: <img width={50} src="/assets/img/services/fb/1.webp" />,
   },
   {
     name: "Tìm kiếm khách hàng tiềm năng",
     desc: "Kết nối với những khách hàng tiềm năng cho doanh nghiệp của bạn",
-    url: "/assets/img/services/fb/2.webp",
+    icon: <img width={50} src="/assets/img/services/fb/2.webp" />,
   },
   {
     name: "Thúc đẩy lượt tương tác",
     desc: "Hiển thị quảng cáo cho những người có khả năng sẽ quan tâm đến doanh nghiệp bạn và tăng số tin nhắn, lượt xem video hoặc lượt tương tác với bài viết.",
-    url: "/assets/img/services/fb/3.webp",
+    icon: <img width={50} src="/assets/img/services/fb/3.webp" />,
   },
   {
     name: "Tăng lưu lượng truy cập",
     desc: " Thu hút thêm nhiều khách truy cập trang web hoặc cửa hàng thực của bạn bằng quảng cáo lưu lượng truy cập.",
-    url: "/assets/img/services/fb/4.webp",
+    icon: <img width={50} src="/assets/img/services/fb/4.webp" />,
   },
   {
     name: "Xây dựng mức độ nhận biết",
     desc: " Hãy để khách hàng tiềm năng nhớ đến bạn đầu tiên bằng quảng cáo mức độ nhận biết trên Facebook và Instagram. ",
-    url: "/assets/img/services/fb/5.webp",
+    icon: <img width={50} src="/assets/img/services/fb/5.webp" />,
   },
   {
     name: "Tăng lượt cài đặt ứng dụng",
     desc: " Tăng số người dùng ứng dụng của bạn bằng mục tiêu quảng cáo ứng dụng cho quảng cáo trên Facebook",
-    url: "/assets/img/services/fb/6.webp",
+    icon: <img width={50} src="/assets/img/services/fb/6.webp" />,
   },
 ];
 

@@ -16,6 +16,7 @@ import StepConnector, {
   stepConnectorClasses,
 } from "@mui/material/StepConnector";
 import FormRegister from "../../../components/FormRegister/FormRegister";
+import { Link } from "react-router-dom";
 
 const Title = styled("h2")(({ theme }) => ({
   fontSize: "1.5rem",
@@ -45,6 +46,17 @@ const steps = [
   "Triển khai dịch vụ quảng cáo Online",
   "Theo dõi, tối ưu, đo lường và báo cáo",
 ];
+
+const LinkStyle = styled(Link)(({ theme }) => ({
+  padding: "10px 15px",
+  background: "#1565C0",
+  boxShadow:
+    "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
+  color: "var(--light-color)",
+  textDecoration: "none",
+  fontWeight: 600,
+  borderRadius: "5px",
+}));
 
 function AdsServices() {
   return (
@@ -80,7 +92,13 @@ function AdsServices() {
           <h1 className="title" style={{ marginBottom: "50px" }}>
             Các dịch vụ quảng cáo trực tuyến tại The 83
           </h1>
-          <Grid container spacing={10} alignItems="center" marginBottom="50px">
+          <Grid
+            container
+            spacing={10}
+            alignItems="center"
+            marginBottom="50px"
+            justifyContent="center"
+          >
             <Grid item xs={12} md={5}>
               <Title>Quảng cáo Facebook</Title>
               <p>
@@ -92,16 +110,20 @@ function AdsServices() {
                 nhanh bằng nhiều hình thức, chi phí tiết kiệm. Khả năng tương
                 tác dễ dàng.
               </p>
-              <Button variant="contained" endIcon={<ArrowForwardIosIcon />}>
-                Xem thêm
-              </Button>
+              <LinkStyle to={"/dich-vu-ads/facebook"}>Xem thêm</LinkStyle>
             </Grid>
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={6}>
               <img width="100%" src="/assets/img/services/bg-fb.png" />
             </Grid>
           </Grid>
-          <Grid container spacing={10} alignItems="center" marginBottom="50px">
-            <Grid item xs={12} md={7}>
+          <Grid
+            container
+            spacing={10}
+            alignItems="center"
+            marginBottom="50px"
+            justifyContent="center"
+          >
+            <Grid item xs={12} md={6}>
               <img width="100%" src="/assets/img/services/bg-gg.png" />
             </Grid>
             <Grid item xs={12} md={5}>
@@ -114,12 +136,16 @@ function AdsServices() {
                 vi tiếp cận rộng và đúng đối tượng tiềm năng, bán hàng & gia
                 tăng doanh thu hiệu quả, phù hợp với mọi ngân sách.
               </p>
-              <Button variant="contained" endIcon={<ArrowForwardIosIcon />}>
-                Xem thêm
-              </Button>
+              <LinkStyle to={"/dich-vu-ads/google"}>Xem thêm</LinkStyle>
             </Grid>
           </Grid>
-          <Grid container spacing={10} alignItems="center" marginBottom="50px">
+          <Grid
+            container
+            spacing={10}
+            alignItems="center"
+            marginBottom="50px"
+            justifyContent="center"
+          >
             <Grid item xs={12} md={5}>
               <Title>Quảng cáo Youtube</Title>
               <p>
@@ -128,16 +154,20 @@ function AdsServices() {
                 giản hóa mục tiêu thể hiện nội dung, truyền tải thông điệp và
                 quảng bá sản phẩm với chi phí rất hợp lý.
               </p>
-              <Button variant="contained" endIcon={<ArrowForwardIosIcon />}>
-                Xem thêm
-              </Button>
+              <LinkStyle to={"/dich-vu-ads/youtube"}>Xem thêm</LinkStyle>
             </Grid>
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={6}>
               <img width="100%" src="/assets/img/services/bg-yt.webp" />
             </Grid>
           </Grid>
-          <Grid container spacing={10} alignItems="center" marginBottom="50px">
-            <Grid item xs={12} md={7}>
+          <Grid
+            container
+            spacing={10}
+            alignItems="center"
+            marginBottom="50px"
+            justifyContent="center"
+          >
+            <Grid item xs={12} md={6}>
               <img width="100%" src="/assets/img/services/bg-tiktok.webp" />
             </Grid>
             <Grid item xs={12} md={5}>
@@ -150,9 +180,7 @@ function AdsServices() {
                 muốn, ví dụ như Shopee, Lazada, Tiki, Facebook, Instagram… Từ đó
                 giúp doanh nghiệp tăng doanh số, xây dựng thương hiệu hiệu quả.
               </p>
-              <Button variant="contained" endIcon={<ArrowForwardIosIcon />}>
-                Xem thêm
-              </Button>
+              <LinkStyle to={"/dich-vu-ads/tiktok"}>Xem thêm</LinkStyle>
             </Grid>
           </Grid>
         </Box>

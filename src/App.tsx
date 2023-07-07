@@ -8,6 +8,9 @@ import Footer from "./components/Footer/Footer";
 import About from "./views/About";
 import AdsServices from "./views/Services/quang-cao/AdsServices";
 import Facebook from "./views/Services/quang-cao/Facebook";
+import Tiktok from "./views/Services/quang-cao/Tiktok";
+import Google from "./views/Services/quang-cao/Google";
+import Youtube from "./views/Services/quang-cao/Youtube";
 
 function App() {
   const { pathname } = useLocation();
@@ -24,6 +27,9 @@ function App() {
         <Route path="/gioi-thieu" element={<About />} />
         <Route path="/dich-vu-ads" element={<AdsServices />} />
         <Route path="/dich-vu-ads/facebook" element={<Facebook />} />
+        <Route path="/dich-vu-ads/tiktok" element={<Tiktok />} />
+        <Route path="/dich-vu-ads/google" element={<Google />} />
+        <Route path="/dich-vu-ads/youtube" element={<Youtube />} />
         <Route path="/kien-thuc" element={<Home />} />
         <Route path="/lien-he" element={<Home />} />
       </Routes>

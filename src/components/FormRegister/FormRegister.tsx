@@ -13,7 +13,7 @@ const itemData = [
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
     title: "Breakfast",
-    rows: 2.5,
+    rows: 2,
     cols: 4,
   },
   {
@@ -58,9 +58,9 @@ function FormRegister() {
               cols={4}
               rowHeight={121}
             >
-              {itemData.map((item) => (
+              {itemData.map((item, index) => (
                 <ImageListItem
-                  key={item.img}
+                  key={index}
                   cols={item.cols || 1}
                   rows={item.rows || 1}
                 >
