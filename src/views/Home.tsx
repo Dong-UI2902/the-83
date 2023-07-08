@@ -149,7 +149,7 @@ function home() {
         <StepperService />
         <Box className="section" sx={{ display: { md: "block", xs: "none" } }}>
           <h1 className="title" style={{ textAlign: "start" }}>
-            <span style={{ fontSize: "2rem" }}>Tại sao nên chọn</span>
+            <span style={{ fontSize: "2rem" }}>Các dịch vụ khác</span>
             <br />
             <span
               style={{
