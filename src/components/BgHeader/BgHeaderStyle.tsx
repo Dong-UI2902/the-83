@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
 import React, { FC } from "react";
 
-const BgHeaderStyle: FC<{ url: string; children?: any }> = ({
+const BgHeaderStyle: FC<{ url: string; props?: any; children?: any }> = ({
   url,
+  props,
   children,
 }) => {
   return (
@@ -13,6 +14,7 @@ const BgHeaderStyle: FC<{ url: string; children?: any }> = ({
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        ...props,
       }}
     >
       {children}

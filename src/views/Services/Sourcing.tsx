@@ -90,7 +90,11 @@ function Sourcing() {
               <Grid item md={6} key={index}>
                 <Card
                   variant="outlined"
-                  sx={{ height: "100%", p: 7, textAlign: "center" }}
+                  sx={{
+                    height: "100%",
+                    p: { sx: 0, md: 7 },
+                    textAlign: "center",
+                  }}
                 >
                   <CardContent>
                     <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>

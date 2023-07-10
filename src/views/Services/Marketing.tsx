@@ -11,7 +11,10 @@ function Marketing() {
     <div>
       <Box
         sx={{
-          height: "65vh",
+          height: {
+            sx: "80vh",
+            md: "65vh",
+          },
           backgroundImage: "url('/assets/img/services/bg-fb-page.webp')",
           backgroundPosition: "center 100%",
           backgroundRepeat: "no-repeat",
@@ -21,7 +24,12 @@ function Marketing() {
         }}
       >
         <Layout>
-          <Grid container spacing={4} justifyContent="center" p={10}>
+          <Grid
+            container
+            spacing={4}
+            justifyContent="center"
+            p={{ sx: 0, md: 10 }}
+          >
             <Grid item md={5}>
               <h1>Tư Vấn Chiến Lược Marketing Online.</h1>
               <p>

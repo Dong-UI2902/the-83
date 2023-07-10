@@ -36,14 +36,22 @@ function Youtube() {
     <div>
       <Box
         sx={{
-          height: "65vh",
+          height: {
+            sx: "80vh",
+            md: "65vh",
+          },
           background: "#FA6D64",
           paddingTop: "50px",
           position: "relative",
         }}
       >
         <Layout>
-          <Grid container spacing={4} justifyContent="center" p={10}>
+          <Grid
+            container
+            spacing={4}
+            justifyContent="center"
+            p={{ sx: 0, md: 10 }}
+          >
             <Grid item md={5} sx={{ color: "var(--light-color)" }}>
               <h1>Phát triển doanh nghiệp của bạn bằng YouTube Ads</h1>
               <p style={{ color: "var(--light-color)" }}>

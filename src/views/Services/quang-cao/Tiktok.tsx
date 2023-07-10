@@ -56,7 +56,10 @@ function Tiktok() {
     <div>
       <Box
         sx={{
-          height: "65vh",
+          height: {
+            sx: "80vh",
+            md: "65vh",
+          },
           backgroundImage: "url('/assets/img/services/tiktok/bg-header.jpg')",
           backgroundPosition: "center 100%",
           backgroundRepeat: "no-repeat",
@@ -71,7 +74,7 @@ function Tiktok() {
             spacing={4}
             justifyContent="center"
             alignItems="center"
-            p={10}
+            p={{ sx: 0, md: 10 }}
           >
             <Grid item md={5} sx={{ color: "var(--light-color)" }}>
               <h1>

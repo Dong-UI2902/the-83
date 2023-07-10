@@ -13,7 +13,10 @@ import FormRegister from "../../components/FormRegister/FormRegister";
 function Editor() {
   return (
     <div>
-      <BgHeaderStyle url={"/assets/img/editor/bg-header.webp"} />
+      <BgHeaderStyle
+        props={{ height: "44vh", backgroundSize: "contain" }}
+        url={"/assets/img/editor/bg-header.webp"}
+      />
       <Layout props={{ position: "relative" }}>
         <Box className="section">
           <Grid
