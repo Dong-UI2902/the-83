@@ -96,17 +96,40 @@ function Footer() {
                   </LinkStyle>
                 </li>
                 <li>
-                  <LinkStyle href="/dich-vu" underline="hover">
-                    {">"} Facebook Ads
+                  <LinkStyle href="/dich-vu-ads" underline="hover">
+                    {">"} Dịch vụ quảng cáo Online
                   </LinkStyle>
                 </li>
                 <li>
-                  <LinkStyle href="/dich-vu" underline="hover">
-                    {">"} Ads Services
+                  <LinkStyle href="/dich-vu-webdesign" underline="hover">
+                    {">"} Thiết kế website
                   </LinkStyle>
                 </li>
                 <li>
-                  <LinkStyle href="/dich-vu" underline="hover">
+                  <LinkStyle href="/dich-vu-editor" underline="hover">
+                    {">"} Thiết kế hình ảnh, video
+                  </LinkStyle>
+                </li>
+                <li>
+                  <LinkStyle href="/dich-vu-marketing-online" underline="hover">
+                    {">"} Tư Vấn Chiến Lược Marketing Online.
+                  </LinkStyle>
+                </li>
+                <li>
+                  <LinkStyle
+                    href="/dich-vu-nhan-dien-thuong-hieu"
+                    underline="hover"
+                  >
+                    {">"} Xây dựng bộ nhận diện thương hiệu
+                  </LinkStyle>
+                </li>
+                <li>
+                  <LinkStyle href="/dich-vu-tim-nguon-hang" underline="hover">
+                    {">"} Tìm nguồn hàng
+                  </LinkStyle>
+                </li>
+                <li>
+                  <LinkStyle href="/lien-he" underline="hover">
                     {">"} Liên hệ
                   </LinkStyle>
                 </li>

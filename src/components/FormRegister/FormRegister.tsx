@@ -11,18 +11,18 @@ import React from "react";
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    img: "/assets/img/about/1.jpg",
     title: "Breakfast",
     rows: 2,
     cols: 4,
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    img: "/assets/img/about/2.jpg",
     title: "Burger",
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+    img: "/assets/img/about/3.jpg",
     title: "Camera",
     cols: 2,
   },
@@ -68,6 +68,7 @@ function FormRegister() {
                     {...srcset(item.img, 121, item.rows, item.cols)}
                     alt={item.title}
                     loading="lazy"
+                    style={{ borderRadius: "10px" }}
                   />
                 </ImageListItem>
               ))}
