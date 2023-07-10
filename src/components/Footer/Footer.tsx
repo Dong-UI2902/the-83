@@ -87,7 +87,7 @@ function Footer() {
                 <img width={80} src="/assets/img/dmca_protected_.png" />
               </Box>
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid item xs={12} md={3}>
               <HeaderStyle>The83 Social Media</HeaderStyle>
               <UlStyle>
                 <li>
@@ -185,7 +185,7 @@ function Footer() {
                 </UlStyle>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={3}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.055339106592!2d106.7983193757685!3d10.807073658626203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527f6d34cb91f%3A0x5068df3768af1beb!2zQ8O0bmcgdHkgVE5ISCBUaMawxqFuZyBN4bqhaSBUaGU4MyBTb2NpYWwgTWVkaWE!5e0!3m2!1svi!2s!4v1688533516376!5m2!1svi!2s"
                 width="100%"
