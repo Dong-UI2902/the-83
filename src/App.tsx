@@ -14,6 +14,9 @@ import Youtube from "./views/Services/quang-cao/Youtube";
 import Contact from "./views/Contact";
 import WebDesign from "./views/Services/WebDesign";
 import Editor from "./views/Services/Editor";
+import Marketing from "./views/Services/Marketing";
+import Brand from "./views/Services/Brand";
+import Sourcing from "./views/Services/Sourcing";
 
 function App() {
   const { pathname } = useLocation();
@@ -35,6 +38,9 @@ function App() {
         <Route path="/dich-vu-ads/youtube" element={<Youtube />} />
         <Route path="/dich-vu-webdesign" element={<WebDesign />} />
         <Route path="/dich-vu-editor" element={<Editor />} />
+        <Route path="/dich-vu-marketing-online" element={<Marketing />} />
+        <Route path="/dich-vu-nhan-dien-thuong-hieu" element={<Brand />} />
+        <Route path="/dich-vu-tim-nguon-hang" element={<Sourcing />} />
         <Route path="/kien-thuc" element={<Home />} />
         <Route path="/lien-he" element={<Contact />} />
       </Routes>

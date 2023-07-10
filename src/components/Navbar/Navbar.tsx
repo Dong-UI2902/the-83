@@ -267,15 +267,30 @@ export default function PersistentDrawerLeft() {
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
-                            Tư vấn chiến lược Marketing Online
+                            <LinkStyle
+                              href={"dich-vu-marketing-online"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Tư vấn chiến lược Marketing Online
+                            </LinkStyle>
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
-                            Xây dựng bộ nhận diện thương hiệu
+                            <LinkStyle
+                              href={"dich-vu-nhan-dien-thuong-hieu"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Xây dựng bộ nhận diện thương hiệu
+                            </LinkStyle>
                           </MenuItem>
                           <Divider />
                           <MenuItem onClick={handleClose}>
-                            Tìm nguồn hàng phát triển hệ thống kinh doanh
+                            <LinkStyle
+                              href={"dich-vu-tim-nguon-hang"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Tìm nguồn hàng phát triển hệ thống kinh doanh
+                            </LinkStyle>
                           </MenuItem>
                         </Menu>
                       </label>
