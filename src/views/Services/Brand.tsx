@@ -41,11 +41,13 @@ function Brand() {
             }}
           >
             <h1 className="title">Xây Dựng Bộ Nhận Diện Thương Hiệu</h1>
-            <p style={{ color: "var(--light-color)" }}>
-              Bộ nhận diện thương hiệu được coi là là yếu tố giúp doanh nghiệp
-              trở nên độc đáo và khác biệt với các đối thủ cạnh tranh trên thị
-              trường.
-            </p>
+            <center>
+              <p style={{ color: "var(--light-color)", maxWidth: "1024px" }}>
+                Bộ nhận diện thương hiệu được coi là là yếu tố giúp doanh nghiệp
+                trở nên độc đáo và khác biệt với các đối thủ cạnh tranh trên thị
+                trường.
+              </p>
+            </center>
           </Box>
         </Box>
       </Box>

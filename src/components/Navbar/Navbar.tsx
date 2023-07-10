@@ -268,6 +268,15 @@ export default function PersistentDrawerLeft() {
                           <Divider />
                           <MenuItem onClick={handleClose}>
                             <LinkStyle
+                              href={"dich-vu-khoa-hoc-ads"}
+                              className={checkRoute(item.href) ? "active" : ""}
+                            >
+                              Đào tạo khoá học Ads
+                            </LinkStyle>
+                          </MenuItem>
+                          <Divider />
+                          <MenuItem onClick={handleClose}>
+                            <LinkStyle
                               href={"dich-vu-marketing-online"}
                               className={checkRoute(item.href) ? "active" : ""}
                             >

@@ -6,6 +6,11 @@ import {
   Button,
   styled,
   TextField,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  FormControl,
 } from "@mui/material";
 import React from "react";
 
@@ -47,6 +52,12 @@ TextInput.defaultProps = {
 };
 
 function FormRegister() {
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value);
+  };
+
   return (
     <div>
       <Box className="section">
@@ -80,8 +91,33 @@ function FormRegister() {
               <TextInput label="Họ và tên" />
               <TextInput label="Điện thoại" />
               <TextInput label="Email" />
-              <TextInput label="Tên doanh nghiệp" />
+              <TextInput label="Tên doanh nghiệp  (nếu có)" />
               <TextInput label="Website (nếu có)" />
+              <FormControl
+                variant="standard"
+                sx={{ m: "10px 0", width: "100%" }}
+              >
+                <InputLabel
+                  id="demo-simple-select-standard-label"
+                  variant="standard"
+                >
+                  Chọn dịch vụ cần hỗ trợ
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-standard-label"
+                  id="demo-simple-select-standard"
+                  value={age}
+                  onChange={handleChange}
+                  label="Age"
+                >
+                  {ListServices.map((item, index) => (
+                    <MenuItem key={index} value={10}>
+                      {item}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
               <center>
                 <Button variant="contained" sx={{ marginTop: 2 }}>
                   Contained
@@ -94,5 +130,18 @@ function FormRegister() {
     </div>
   );
 }
+
+const ListServices = [
+  "Facebook Ads",
+  "Tiktok Ads",
+  "Google Ads",
+  "Khoá học Social Media Advertising",
+  "Thiết kế website, landing page",
+  "Thiết kế hình ảnh, video",
+  "Tư vấn chiến lược Marketing Online",
+  "Xây dựng bộ nhận diện thương hiệu",
+  "Tìm nguồn hàng phát triển hệ thống kinh doanh",
+  "khác...",
+];
 
 export default FormRegister;

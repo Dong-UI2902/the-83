@@ -43,7 +43,7 @@ function Sourcing() {
               Tìm nguồn hàng phát triển hệ thống kinh doanh
             </h1>
             <center>
-              <p style={{ color: "var(--light-color)" }}>
+              <p style={{ color: "var(--light-color)", maxWidth: "1024px" }}>
                 Các nguồn hàng hiện tại không ổn định, giá thành cao, khó cạnh
                 tranh trên thị trường thì việc tìm nguồn hàng tốt là yêu cầu cấp
                 bách.

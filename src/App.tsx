@@ -17,6 +17,7 @@ import Editor from "./views/Services/Editor";
 import Marketing from "./views/Services/Marketing";
 import Brand from "./views/Services/Brand";
 import Sourcing from "./views/Services/Sourcing";
+import Learning from "./views/Services/Learning";
 
 function App() {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ function App() {
         <Route path="/dich-vu-marketing-online" element={<Marketing />} />
         <Route path="/dich-vu-nhan-dien-thuong-hieu" element={<Brand />} />
         <Route path="/dich-vu-tim-nguon-hang" element={<Sourcing />} />
+        <Route path="/dich-vu-khoa-hoc-ads" element={<Learning />} />
         <Route path="/kien-thuc" element={<Home />} />
         <Route path="/lien-he" element={<Contact />} />
       </Routes>

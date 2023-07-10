@@ -111,6 +111,11 @@ function Footer() {
                   </LinkStyle>
                 </li>
                 <li>
+                  <LinkStyle href="/dich-vu-khoa-hoc-ads" underline="hover">
+                    {">"} Đào tạo khoá học Ads
+                  </LinkStyle>
+                </li>
+                <li>
                   <LinkStyle href="/dich-vu-marketing-online" underline="hover">
                     {">"} Tư Vấn Chiến Lược Marketing Online.
                   </LinkStyle>
@@ -132,27 +137,6 @@ function Footer() {
                   <LinkStyle href="/lien-he" underline="hover">
                     {">"} Liên hệ
                   </LinkStyle>
-                </li>
-                <li>
-                  <SocialStyle>
-                    <FacebookIcon />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-tiktok"
-                      viewBox="0 0 18 16"
-                      style={{
-                        border: "2px solid black",
-                        borderRadius: "5px",
-                        padding: "2px",
-                      }}
-                    >
-                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"></path>
-                    </svg>
-                    <InstagramIcon />
-                  </SocialStyle>
                 </li>
               </UlStyle>
             </Grid>
@@ -182,6 +166,27 @@ function Footer() {
                     <PhoneIcon />
                     Hotline: 0924 620 620
                   </LiStyle>
+                  <li>
+                    <SocialStyle>
+                      <FacebookIcon />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        className="bi bi-tiktok"
+                        viewBox="0 0 18 16"
+                        style={{
+                          border: "2px solid black",
+                          borderRadius: "5px",
+                          padding: "2px",
+                        }}
+                      >
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"></path>
+                      </svg>
+                      <InstagramIcon />
+                    </SocialStyle>
+                  </li>
                 </UlStyle>
               </Box>
             </Grid>
