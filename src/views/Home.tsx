@@ -100,6 +100,7 @@ function home() {
             <BgImgStyle
               src="/assets/img/background/theming-gradient.svg"
               alt=""
+              loading="lazy"
             />
           </Box>
           <Service />
@@ -116,6 +117,7 @@ function home() {
             <BgImgStyle
               src="/assets/img/background/customization-gradient.svg"
               alt=""
+              loading="lazy"
             />
           </Box>
           <Box
@@ -126,7 +128,7 @@ function home() {
               zIndex: "0",
             }}
           >
-            <BgImgStyle src="/assets/img/confused/map-new.png" alt="" />
+            <BgImgStyle loading="lazy" src="/assets/img/confused/map-new.png" alt="" />
           </Box>
           <Confused />
         </Box>
@@ -142,6 +144,7 @@ function home() {
             <BgImgStyle
               src="/assets/img/background/dark-mode-gradient.svg"
               alt=""
+              loading="lazy"
             />
           </Box>
           <ChooseUs />

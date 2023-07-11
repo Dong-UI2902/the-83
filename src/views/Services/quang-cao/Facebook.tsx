@@ -37,7 +37,11 @@ function Facebook() {
               </p>
             </Grid>
             <Grid item md={5}>
-              <img width="100%" src="/assets/img/services/fb-desc.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/fb-desc.webp"
+              />
             </Grid>
           </Grid>
         </Layout>
@@ -51,7 +55,11 @@ function Facebook() {
             alignItems="center"
           >
             <Grid item md={4}>
-              <img width="100%" src="/assets/img/services/fb-1.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/fb-1.webp"
+              />
             </Grid>
             <Grid item md={4}>
               <h1>Quảng cáo trên Facebook và Instagram</h1>

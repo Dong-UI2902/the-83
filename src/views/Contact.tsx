@@ -85,7 +85,7 @@ function Contact() {
               </Box>
             </Grid>
             <Grid item xs={12} md={5}>
-              <img width="100%" src="/assets/img/pink-logo.png" />
+              <img loading="lazy" width="100%" src="/assets/img/pink-logo.png" />
             </Grid>
           </Grid>
         </Box>

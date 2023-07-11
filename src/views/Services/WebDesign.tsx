@@ -32,12 +32,12 @@ function WebDesign() {
             dung, chức năng đến cả cách thức vận hành.
           </p>
           <Box sx={{ maxWidth: "600px", margin: "0 auto" }}>
-            <img width="100%" src="/assets/img/web-design/1.png" />
+            <img loading="lazy" width="100%" src="/assets/img/web-design/1.png" />
           </Box>
           <Box className="section">
             <Grid container spacing={4}>
               <Grid item md={6}>
-                <img width="100%" src="/assets/img/web-design/2.jpg" />
+                <img loading="lazy" width="100%" src="/assets/img/web-design/2.jpg" />
               </Grid>
               <Grid item md={6}>
                 <h1>Tăng trưởng doanh thu – phát triển doanh nghiệp</h1>

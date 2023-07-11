@@ -41,6 +41,7 @@ function Marketing() {
             </Grid>
             <Grid item md={5}>
               <img
+                loading="lazy"
                 width="100%"
                 src="/assets/img/marketing-online/bg-header.png"
               />
@@ -66,6 +67,7 @@ function Marketing() {
             <Grid container spacing={4}>
               <Grid item md={6}>
                 <img
+                  loading="lazy"
                   style={{ borderRadius: "20px" }}
                   width="100%"
                   src="/assets/img/marketing-online/1.png"
@@ -101,7 +103,11 @@ function Marketing() {
                 </p>
               </Grid>
               <Grid item md={6}>
-                <img width="100%" src="/assets/img/marketing-online/2.jpg" />
+                <img
+                  loading="lazy"
+                  width="100%"
+                  src="/assets/img/marketing-online/2.jpg"
+                />
               </Grid>
             </Grid>
           </Box>
@@ -110,6 +116,7 @@ function Marketing() {
           <Grid container alignItems="end" spacing={4}>
             <Grid item md={6}>
               <img
+                loading="lazy"
                 style={{ borderRadius: "20px" }}
                 width="100%"
                 src="/assets/img/marketing-online/3.png"

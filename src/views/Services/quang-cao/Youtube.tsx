@@ -61,6 +61,7 @@ function Youtube() {
             </Grid>
             <Grid item md={5}>
               <img
+                loading="lazy"
                 style={{ background: "#fff", borderRadius: "10px" }}
                 width="100%"
                 src="/assets/img/services/youtube/bg-header.svg "
@@ -111,7 +112,11 @@ function Youtube() {
               </p>
             </Grid>
             <Grid item md={4}>
-              <img width="100%" src="/assets/img/services/youtube/2.svg" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/youtube/2.svg"
+              />
             </Grid>
           </Grid>
         </Box>
@@ -123,7 +128,11 @@ function Youtube() {
             alignItems="center"
           >
             <Grid item md={3}>
-              <img width="100%" src="/assets/img/services/youtube/1.svg" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/youtube/1.svg"
+              />
             </Grid>
             <Grid item md={4}>
               <h1>Bumper Video Ads</h1>

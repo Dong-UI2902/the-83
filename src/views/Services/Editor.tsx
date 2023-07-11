@@ -35,7 +35,7 @@ function Editor() {
               </p>
             </Grid>
             <Grid item md={5}>
-              <img width="100%" src="/assets/img/editor/1.jpg" />
+              <img loading="lazy" width="100%" src="/assets/img/editor/1.jpg" />
             </Grid>
           </Grid>
         </Box>

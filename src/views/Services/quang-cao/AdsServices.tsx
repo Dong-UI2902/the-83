@@ -86,7 +86,11 @@ function AdsServices() {
               <LinkStyle to={"/dich-vu-ads/facebook"}>Xem thêm</LinkStyle>
             </Grid>
             <Grid item xs={12} md={6}>
-              <img width="100%" src="/assets/img/services/bg-fb.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/bg-fb.png"
+              />
             </Grid>
           </Grid>
           <Grid
@@ -97,7 +101,11 @@ function AdsServices() {
             justifyContent="center"
           >
             <Grid item xs={12} md={6}>
-              <img width="100%" src="/assets/img/services/bg-gg.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/bg-gg.png"
+              />
             </Grid>
             <Grid item xs={12} md={5}>
               <Title>Quảng cáo Google</Title>
@@ -130,7 +138,11 @@ function AdsServices() {
               <LinkStyle to={"/dich-vu-ads/youtube"}>Xem thêm</LinkStyle>
             </Grid>
             <Grid item xs={12} md={6}>
-              <img width="100%" src="/assets/img/services/bg-yt.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/bg-yt.webp"
+              />
             </Grid>
           </Grid>
           <Grid
@@ -141,7 +153,11 @@ function AdsServices() {
             justifyContent="center"
           >
             <Grid item xs={12} md={6}>
-              <img width="100%" src="/assets/img/services/bg-tiktok.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/bg-tiktok.webp"
+              />
             </Grid>
             <Grid item xs={12} md={5}>
               <Title>Quảng cáo Tiktok</Title>

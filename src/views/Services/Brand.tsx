@@ -61,6 +61,7 @@ function Brand() {
           <Grid container spacing={4} alignItems="center">
             <Grid item md={6}>
               <img
+                loading="lazy"
                 style={{ borderRadius: "20px" }}
                 width="100%"
                 src="/assets/img/brand/1.jpg"
@@ -108,7 +109,7 @@ function Brand() {
               </List>
             </Grid>
             <Grid item md={6}>
-              <img width="100%" src="/assets/img/brand/2.png" />
+              <img loading="lazy" width="100%" src="/assets/img/brand/2.png" />
             </Grid>
           </Grid>
         </Box>
@@ -116,6 +117,7 @@ function Brand() {
           <Grid container spacing={4} justifyContent="center">
             <Grid item md={6}>
               <img
+                loading="lazy"
                 style={{ borderRadius: "20px" }}
                 width="100%"
                 src="/assets/img/brand/3.jpg"

@@ -172,6 +172,7 @@ function About() {
                     display: "block",
                     margin: "0 auto",
                   }}
+                  loading="lazy"
                   src="/assets/img/about/social2.png"
                 />
               </Grid>
@@ -216,7 +217,7 @@ function About() {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <img width={"100%"} src="/assets/img/about/social1.png" />
+                <img loading="lazy" width={"100%"} src="/assets/img/about/social1.png" />
               </Grid>
             </Grid>
           </Box>

@@ -86,7 +86,11 @@ function Tiktok() {
               </p>
             </Grid>
             <Grid item md={6}>
-              <img width="100%" src="/assets/img/services/tiktok-shop.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/tiktok-shop.png"
+              />
             </Grid>
           </Grid>
         </Layout>
@@ -101,6 +105,7 @@ function Tiktok() {
           >
             <Grid item md={4}>
               <img
+                loading="lazy"
                 width="100%"
                 src="/assets/img/services/tiktok/bg-header.awebp"
               />
@@ -151,7 +156,11 @@ function Tiktok() {
               </div>
             </Grid>
             <Grid item md={6}>
-              <img width="100%" src="/assets/img/services/tiktok/1.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/tiktok/1.webp"
+              />
             </Grid>
           </Grid>
         </Box>

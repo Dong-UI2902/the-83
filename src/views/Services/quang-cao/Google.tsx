@@ -59,7 +59,11 @@ function Google() {
               </p>
             </Grid>
             <Grid item md={5}>
-              <img width="100%" src="/assets/img/services/gg/bg-header.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/gg/bg-header.webp"
+              />
             </Grid>
           </Grid>
         </Layout>
@@ -73,7 +77,11 @@ function Google() {
             alignItems="center"
           >
             <Grid item md={4}>
-              <img width="100%" src="/assets/img/services/gg/search.webp" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/gg/search.webp"
+              />
             </Grid>
             <Grid item md={4}>
               <h1>Quảng cáo trên Google</h1>
@@ -99,15 +107,27 @@ function Google() {
             alignItems="center"
           >
             <Grid item md={3}>
-              <img width="100%" src="/assets/img/services/gg/1.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/gg/1.png"
+              />
               <center>Quảng cáo trên YouTube</center>
             </Grid>
             <Grid item md={3}>
-              <img width="100%" src="/assets/img/services/gg/2.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/gg/2.png"
+              />
               <center>Quảng cáo Tìm kiếm</center>
             </Grid>
             <Grid item md={3}>
-              <img width="100%" src="/assets/img/services/gg/3.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/gg/3.png"
+              />
               <center>Quảng cáo Hiển thị</center>
             </Grid>
           </Grid>

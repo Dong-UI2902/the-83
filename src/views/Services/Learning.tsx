@@ -86,6 +86,7 @@ function Learning() {
             </Grid>
             <Grid item md={5}>
               <img
+                loading="lazy"
                 style={{ borderRadius: "10px" }}
                 width="100%"
                 src="/assets/img/learning/1.png"

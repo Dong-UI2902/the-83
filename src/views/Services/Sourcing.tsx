@@ -74,6 +74,7 @@ function Sourcing() {
             </Grid>
             <Grid item md={6}>
               <img
+                loading="lazy"
                 width="100%"
                 style={{ borderRadius: "20px" }}
                 src="/assets/img/sourcing/1.jpg"
@@ -125,6 +126,7 @@ function Sourcing() {
           <Grid container alignItems="end" spacing={4} justifyContent="center">
             <Grid item md={5}>
               <img
+                loading="lazy"
                 style={{ borderRadius: "20px" }}
                 width="100%"
                 src="/assets/img/sourcing/quy-trinh.png"
