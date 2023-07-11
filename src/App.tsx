@@ -18,6 +18,7 @@ import Marketing from "./views/Services/Marketing";
 import Brand from "./views/Services/Brand";
 import Sourcing from "./views/Services/Sourcing";
 import Learning from "./views/Services/Learning";
+import MarketingOnline from "./views/Knowledge/MarketingOnline";
 
 function App() {
   const { pathname } = useLocation();
@@ -44,6 +45,10 @@ function App() {
         <Route path="/dich-vu-tim-nguon-hang" element={<Sourcing />} />
         <Route path="/dich-vu-khoa-hoc-ads" element={<Learning />} />
         <Route path="/kien-thuc" element={<Home />} />
+        <Route
+          path="/kien-thuc/marketing-online"
+          element={<MarketingOnline />}
+        />
         <Route path="/lien-he" element={<Contact />} />
       </Routes>
       <Footer />

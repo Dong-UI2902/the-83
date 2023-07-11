@@ -9,7 +9,7 @@ const ListCard: FC<{ list: any[] }> = ({ list }) => {
           <Card variant="outlined" sx={{ height: "100%" }}>
             <CardContent>
               {item.icon}
-              <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
+              <Typography variant="h6" component="div" sx={{ mb: 1.5 }}>
                 {item.name}
               </Typography>
               <p>{item.desc}</p>

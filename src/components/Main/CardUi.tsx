@@ -36,9 +36,7 @@ const CardUi: FC<{ title: string; icon: any; desc: any }> = ({
           <IconWrapper alt="ui-1">{icon}</IconWrapper>
           {title}
         </Typography>
-        <Typography sx={{ mt: 1.5 }} color="text.secondary">
-          {desc}
-        </Typography>
+        <Typography sx={{ mt: 1.5 }}>{desc}</Typography>
       </CardContent>
     </Card>
   );
