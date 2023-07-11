@@ -14,6 +14,7 @@ function About() {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} md={6} className="img-about">
           <ImageStyle
+            loading="lazy"
             src="/assets/img/home/dich-vu-thiet-ke-website-my-pham.png"
             alt=""
           />

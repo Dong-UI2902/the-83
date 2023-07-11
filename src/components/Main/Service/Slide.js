@@ -109,6 +109,7 @@ function Service() {
                   backgroundImage:
                     "url('/assets/img/services/icon-gg.png')",
                 }}
+                loading="lazy"
               ></div>
               <Box sx={{ marginTop: "10px" }}>
                 <SlideLinkStyle target="_blank" to={"/dich-vu-ads/google"}>Xem thêm</SlideLinkStyle>
@@ -118,6 +119,7 @@ function Service() {
               <span>Facebook Ads</span>
               <div
                 className="layer__image"
+                loading="lazy"
                 style={{
                   backgroundImage:
                   "url('/assets/img/services/icon-fb.png')",

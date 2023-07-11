@@ -58,11 +58,25 @@ function Header() {
           <img
             className="img-header tiktok"
             src="/assets/img/home/logotiktok.png"
+            loading="lazy"
           />
-          <img className="img-header web" src="/assets/img/home/web2.png" />
-          <img className="img-header meta" src="/assets/img/home/meta.png" />
-          <img className="img-header avatar" src="/assets/img/home/ava.png" />
           <img
+            loading="lazy"
+            className="img-header web"
+            src="/assets/img/home/web2.png"
+          />
+          <img
+            loading="lazy"
+            className="img-header meta"
+            src="/assets/img/home/meta.png"
+          />
+          <img
+            loading="lazy"
+            className="img-header avatar"
+            src="/assets/img/home/ava.png"
+          />
+          <img
+            loading="lazy"
             className="img-header search"
             src="/assets/img/home/search.png"
           />

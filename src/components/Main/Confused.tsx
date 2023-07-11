@@ -19,7 +19,7 @@ function Confused() {
         <h3 style={{ margin: 0 }}>Khi tự triển khai marketing</h3>
       </center>
       <Box className="confused">
-        <ImgStyle src="/assets/img/confused/bg-confused.png" />
+        <ImgStyle loading="lazy" src="/assets/img/confused/bg-confused.png" />
         <div>
           <h3>Không Có Kế Hoạch</h3>
         </div>

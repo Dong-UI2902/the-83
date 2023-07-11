@@ -40,7 +40,11 @@ function Service() {
         <Box maxWidth="1200px" margin="50px auto 0 auto">
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6}>
-              <img width="100%" src="/assets/img/services/thiet-ke-web.jpg" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/services/thiet-ke-web.jpg"
+              />
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography

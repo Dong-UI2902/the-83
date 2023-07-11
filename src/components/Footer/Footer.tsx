@@ -74,6 +74,7 @@ function Footer() {
           <Grid container spacing={2}>
             <Grid item xs={12} md={3}>
               <img
+                loading="lazy"
                 style={{ display: "block", margin: "0 auto" }}
                 width={170}
                 src="/assets/img/pink-logo.png"
@@ -83,8 +84,16 @@ function Footer() {
                 Chuyên sâu trong công nghệ của thời đại kỹ thuật số 4,0.
               </p>
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <img width={170} src="/assets/img/bo-cong-thuong.png" />
-                <img width={80} src="/assets/img/dmca_protected_.png" />
+                <img
+                  width={170}
+                  src="/assets/img/bo-cong-thuong.png"
+                  loading="lazy"
+                />
+                <img
+                  width={80}
+                  src="/assets/img/dmca_protected_.png"
+                  loading="lazy"
+                />
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
