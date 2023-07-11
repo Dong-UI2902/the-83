@@ -133,8 +133,8 @@ function Brand() {
                 khác biệt cho thương hiệu của mình so với các thương hiệu khác
                 trên thị trường, giúp quá trình hoạt động doanh nghiệp của mình
                 đi theo định hướng và một timeline nhất định. Dù bạn đang kinh
-                doanh bất cứ ngành hàng nào, THE 83 tự tin có thể xây dựng
-                thương hiệu cho bạn một cách hiệu quả nhất.
+                doanh bất cứ ngành hàng nào, The83 tự tin có thể xây dựng thương
+                hiệu cho bạn một cách hiệu quả nhất.
               </p>
             </Grid>
           </Grid>

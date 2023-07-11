@@ -16,7 +16,7 @@ import React from "react";
 
 const itemData = [
   {
-    img: "/assets/img/about/1.jpg",
+    img: "/assets/img/team.jpg",
     title: "Breakfast",
     rows: 2,
     cols: 4,
@@ -119,8 +119,11 @@ function FormRegister() {
               </FormControl>
 
               <center>
-                <Button variant="contained" sx={{ marginTop: 2 }}>
-                  Contained
+                <Button
+                  variant="contained"
+                  sx={{ marginTop: 2, p: "7px 70px" }}
+                >
+                  Gửi
                 </Button>
               </center>
             </form>

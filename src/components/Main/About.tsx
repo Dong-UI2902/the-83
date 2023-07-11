@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 import Divider from "@mui/material/Divider";
+import { SlideLinkStyle } from "./Service/Slide";
 
 const ImageStyle = styled("img")(({ theme }) => ({
   width: "100%",
@@ -47,12 +48,12 @@ function About() {
             tại Thành phố Hồ Chí Minh với sứ mệnh thúc đẩy doanh số kinh doanh
             cho quý khách hàng trên thị trường Online.
           </Box>
-          <Button
-            variant="outlined"
+          <SlideLinkStyle
             sx={{ fontWeight: "600", marginTop: "10px" }}
+            to={"/gioi-thieu"}
           >
-            Tìm hiểu thêm
-          </Button>
+            Xem thêm
+          </SlideLinkStyle>
         </Grid>
       </Grid>
     </div>

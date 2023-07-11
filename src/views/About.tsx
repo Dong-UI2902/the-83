@@ -14,50 +14,62 @@ const itemData = [
   {
     img: "/assets/img/about/1.jpg",
     title: "Dịch vụ quảng cáo Facebook",
+    href: "/dich-vu-ads/facebook",
   },
   {
     img: "/assets/img/about/9.jpg",
     title: "Dịch vụ quảng cáo Tiktok",
+    href: "/dich-vu-ads/tiktok",
   },
   {
     img: "/assets/img/about/2.jpg",
     title: "Dịch vụ quảng cáo Youtube",
+    href: "/dich-vu-ads/youtube",
   },
   {
     img: "/assets/img/about/8.jpg",
     title: "Dịch vụ quảng cáo Google",
+    href: "/dich-vu-ads/google",
   },
   {
     img: "/assets/img/about/5.jpg",
     title: "Dịch vụ tư vấn chiến lược Marketing Online tổng thể",
+    href: "/dich-vu-marketing-online",
   },
   {
     img: "/assets/img/about/6.jpg",
     title: "Thiết kế Landing page ",
+    href: "/dich-vu-webdesign",
   },
   {
     img: "/assets/img/about/7.jpg",
     title: "Thiết kế Website chuyên nghiệp",
+    href: "/dich-vu-webdesign",
   },
   {
     img: "/assets/img/about/4.jpg",
     title: "Chăm sóc Website",
+    href: "/dich-vu-webdesign",
   },
   {
     img: "/assets/img/about/11.jpg",
     title: "Thiết kế hình ảnh, video ",
+    href: "/dich-vu-editor",
   },
   {
     img: "/assets/img/about/3.jpg",
     title: "Đào tạo các khóa học Ads",
+    href: "/dich-vu-khoa-hoc-ads",
   },
   {
     img: "/assets/img/about/12.jpg",
     title: "Xây dựng bộ nhận diện thương hiệu",
+    href: "/dich-vu-nhan-dien-thuong-hieu",
   },
   {
     img: "/assets/img/about/13.jpg",
     title: "Hổ trợ tìm nguồn hàng phát triển hệ thống kinh doanh.",
+    href: "/dich-vu-tim-nguon-hang",
   },
 ];
 
@@ -217,7 +229,11 @@ function About() {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <img loading="lazy" width={"100%"} src="/assets/img/about/social1.png" />
+                <img
+                  loading="lazy"
+                  width={"100%"}
+                  src="/assets/img/about/social1.png"
+                />
               </Grid>
             </Grid>
           </Box>

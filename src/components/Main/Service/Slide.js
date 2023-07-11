@@ -5,7 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 import { Box, styled } from "@mui/material";
 
-const SlideLinkStyle = styled(Link)(({ theme }) => ({
+export const SlideLinkStyle = styled(Link)(({ theme }) => ({
   padding: "10px 15px",
   background: "#1565C0",
   boxShadow:
@@ -17,7 +17,6 @@ const SlideLinkStyle = styled(Link)(({ theme }) => ({
   display: "block",
   maxWidth: "150px",
   textAlign: "center",
-  margin: "0 auto",
 }));
 
 function Service() {
@@ -98,7 +97,7 @@ function Service() {
                 }}
               ></div>
               <Box sx={{ marginTop: "10px" }}>
-                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/tiktok"}>Xem thêm</SlideLinkStyle>
+                <SlideLinkStyle sx={{ margin: "0 auto" }} target="_blank" to={"/dich-vu-ads/tiktok"}>Xem thêm</SlideLinkStyle>
               </Box>
             </div>
             <div className="layer" data-scene="2">
@@ -112,7 +111,7 @@ function Service() {
                 loading="lazy"
               ></div>
               <Box sx={{ marginTop: "10px" }}>
-                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/google"}>Xem thêm</SlideLinkStyle>
+                <SlideLinkStyle sx={{ margin: "0 auto" }} target="_blank" to={"/dich-vu-ads/google"}>Xem thêm</SlideLinkStyle>
               </Box>
             </div>
             <div className="layer" data-scene="3">
@@ -126,7 +125,7 @@ function Service() {
                 }}
               ></div>
               <Box sx={{ marginTop: "10px" }}>
-                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/facebook"}>Xem thêm</SlideLinkStyle>
+                <SlideLinkStyle sx={{ margin: "0 auto" }} target="_blank" to={"/dich-vu-ads/facebook"}>Xem thêm</SlideLinkStyle>
               </Box>
             </div>
             <div className="layer" data-scene="4">
@@ -139,7 +138,7 @@ function Service() {
                 }}
               ></div>
               <Box sx={{ marginTop: "10px" }}>
-                <SlideLinkStyle target="_blank" to={"/dich-vu-ads/youtube"}>Xem thêm</SlideLinkStyle>
+                <SlideLinkStyle sx={{ margin: "0 auto" }} target="_blank" to={"/dich-vu-ads/youtube"}>Xem thêm</SlideLinkStyle>
               </Box>
             </div>
           </div>

@@ -57,7 +57,7 @@ function Learning() {
               <h1>Khóa học Social Media Advertising</h1>
               <p>
                 Để bắt nhịp với thị hiếu người tiêu dùng, học về social media là
-                một điều cần thiết với các nhà quảng cáo trẻ tuổi. THE 83 có đầy
+                một điều cần thiết với các nhà quảng cáo trẻ tuổi. The83 có đầy
                 đủ những khoá học quảng cáo trên các kênh social media mà bạn
                 cần.
               </p>
@@ -95,12 +95,12 @@ function Learning() {
           </Grid>
         </Box>
         <Box className="section">
-          <h1 className="title">Các khoá học tại THE 83</h1>
+          <h1 className="title">Các khoá học tại The83</h1>
           <center style={{ maxWidth: "1024px", margin: "0 auto" }}>
             <p>
               Chương trình được phát triển với nội dung từ căn bản đến nâng cao
               và lấy thực hành làm trọng tâm với các khóa học Social Media
-              Marketing tại THE 83
+              Marketing tại The83
             </p>
           </center>
           <Grid container spacing={4} justifyContent="center">

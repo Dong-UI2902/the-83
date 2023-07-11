@@ -80,8 +80,11 @@ function Footer() {
                 src="/assets/img/pink-logo.png"
               />
               <p>
-                Chúng tôi mang đến các Giải pháp Marketing Toàn diện, Ứng dụng
-                Chuyên sâu trong công nghệ của thời đại kỹ thuật số 4,0.
+                Chúng tôi có hơn 6 năm kinh nghiệm kinh doanh online, nên thấu
+                hiểu được sự khó khăn trong biên độ thay đổi liên tục của thị
+                trường hiện nay. Vì thế chúng tôi mang đến giải gháp Marketing
+                toàn diện, đồng hành cùng khách hàng để đạt được kết quả cao
+                nhất.
               </p>
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <img

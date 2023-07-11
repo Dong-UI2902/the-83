@@ -26,18 +26,22 @@ const itemData = [
   {
     img: "/assets/img/about/5.jpg",
     title: "Dịch vụ tư vấn chiến lược Marketing Online tổng thể",
+    href: "/dich-vu-marketing-online",
   },
   {
     img: "/assets/img/about/11.jpg",
     title: "Thiết kế hình ảnh, video ",
+    href: "/dich-vu-editor",
   },
   {
     img: "/assets/img/about/3.jpg",
     title: "Đào tạo các khóa học Ads",
+    href: "/dich-vu-khoa-hoc-ads",
   },
   {
     img: "/assets/img/about/13.jpg",
     title: "Hổ trợ tìm nguồn hàng phát triển hệ thống kinh doanh.",
+    href: "/dich-vu-tim-nguon-hang",
   },
 ];
 
@@ -128,7 +132,11 @@ function home() {
               zIndex: "0",
             }}
           >
-            <BgImgStyle loading="lazy" src="/assets/img/confused/map-new.png" alt="" />
+            <BgImgStyle
+              loading="lazy"
+              src="/assets/img/confused/map-new.png"
+              alt=""
+            />
           </Box>
           <Confused />
         </Box>

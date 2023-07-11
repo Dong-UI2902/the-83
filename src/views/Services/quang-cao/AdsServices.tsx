@@ -1,16 +1,7 @@
 import React from "react";
 import Layout from "../../../components/Layout/Layout";
 import BgHeaderStyle from "../../../components/BgHeader/BgHeaderStyle";
-import {
-  Box,
-  Button,
-  Grid,
-  Step,
-  StepLabel,
-  Stepper,
-  styled,
-  TextField,
-} from "@mui/material";
+import { Box, Grid, styled } from "@mui/material";
 
 import FormRegister from "../../../components/FormRegister/FormRegister";
 import { Link } from "react-router-dom";
@@ -34,7 +25,32 @@ const LinkStyle = styled(Link)(({ theme }) => ({
 function AdsServices() {
   return (
     <div>
-      <BgHeaderStyle url="/assets/img/services/bg-header.png" />
+      <BgHeaderStyle url="/assets/img/services/bg-header.png">
+        <Box
+          sx={{
+            backgroundColor: "#00000080",
+            height: "100%",
+            paddingTop: "50px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{
+              color: "var(--light-color)",
+            }}
+          >
+            <h1 className="title">Dịch vụ quảng cáo Online trực tuyến</h1>
+            <center>
+              <p style={{ color: "var(--light-color)", maxWidth: "1024px" }}>
+                Thúc đẩy tối đa doanh số cho doanh nghiệp.
+              </p>
+            </center>
+          </Box>
+        </Box>
+      </BgHeaderStyle>
+
       <Layout props={{ paddingTop: "70px", position: "relative" }}>
         <Box sx={{ maxWidth: "1204px", m: "0 auto" }}>
           <Grid container>
@@ -63,7 +79,7 @@ function AdsServices() {
         </Box>
         <Box className="section">
           <h1 className="title" style={{ marginBottom: "50px" }}>
-            Các dịch vụ quảng cáo trực tuyến tại The 83
+            Các dịch vụ quảng cáo trực tuyến tại The83
           </h1>
           <Grid
             container

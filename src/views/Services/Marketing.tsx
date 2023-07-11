@@ -92,7 +92,7 @@ function Marketing() {
               <Grid item md={6}>
                 <h1>
                   Bạn có một công ty nhỏ, startup?
-                  <br /> Hãy chọn THE 83
+                  <br /> Hãy chọn The83
                 </h1>
                 <p>
                   Chúng tôi sẽ định hướng mục tiêu và xây dựng chiến lược tiếp
@@ -149,14 +149,14 @@ function Marketing() {
               </p>
               <p>
                 <strong>Điều chỉnh & Báo cáo:</strong> Dựa vào các số liệu thu
-                thấp THE 83 sẽ tiến hành điều chỉnh kế hoạch phù hợp và gửi báo
+                thấp The83 sẽ tiến hành điều chỉnh kế hoạch phù hợp và gửi báo
                 cáo chiến dịch định kỳ 1 lần/tháng.
               </p>
             </Grid>
           </Grid>
         </Box>
         <Box className="section">
-          <h1 className="title">Đến với THE 83</h1>
+          <h1 className="title">Đến với The83</h1>
           <center>
             <h1>
               Hãy để chúng tôi tư vấn chiến lược Marketing Online cho bạn!

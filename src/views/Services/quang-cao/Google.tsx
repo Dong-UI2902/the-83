@@ -86,7 +86,7 @@ function Google() {
             <Grid item md={4}>
               <h1>Quảng cáo trên Google</h1>
               <p>
-                Dịch vụ quảng cáo Google Ads của THE 83 giúp bạn có được nhiều
+                Dịch vụ quảng cáo Google Ads của The83 giúp bạn có được nhiều
                 khách hàng mới nhanh chóng. Google Ads là quá trình quảng cáo
                 thương hiệu của bạn thông qua công cụ tìm kiếm. Khi mọi người
                 tìm kiếm một sản phẩm hoặc dịch vụ mà bạn đang cung cấp trên

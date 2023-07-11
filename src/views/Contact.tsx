@@ -66,7 +66,7 @@ function Contact() {
                       "linear-gradient(rgb(0, 183, 250) 25%, rgb(1, 207, 234) 100%)",
                   }}
                 >
-                  THE 83 SOCIAL MEDIA
+                  THE83 SOCIAL MEDIA
                 </span>
               </h1>
               <Box>
@@ -85,7 +85,11 @@ function Contact() {
               </Box>
             </Grid>
             <Grid item xs={12} md={5}>
-              <img loading="lazy" width="100%" src="/assets/img/pink-logo.png" />
+              <img
+                loading="lazy"
+                width="100%"
+                src="/assets/img/pink-logo.png"
+              />
             </Grid>
           </Grid>
         </Box>

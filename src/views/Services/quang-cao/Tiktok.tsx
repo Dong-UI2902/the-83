@@ -117,7 +117,7 @@ function Tiktok() {
                 cùng vô vàn những hiệu ứng độc đáo cho người dùng thỏa sức sáng
                 tạo. Điều này giúp cho các video về sản phẩm, quảng cáo trên
                 TikTok luôn được truyền đạt nhanh nhất. Dù doanh nghiệp của bạn
-                lớn hay nhỏ, dù bạn đang sản xuất hay bán gì, THE 83 tin rằng
+                lớn hay nhỏ, dù bạn đang sản xuất hay bán gì, The83 tin rằng
                 thương hiệu của bạn đều sẽ quảng cáo hiệu quả trên TikTok
                 <br />
                 Chúng tôi sử dụng kỹ thuật phân tích dữ liệu để xác định nhân
@@ -138,7 +138,7 @@ function Tiktok() {
         >
           <Grid container spacing={4}>
             <Grid item md={6}>
-              <h1>Thúc đẩy kinh doanh với các giải pháp của THE 83.</h1>
+              <h1>Thúc đẩy kinh doanh với các giải pháp của The83.</h1>
               <div>
                 <List>
                   {Item.map((item, index) => (
