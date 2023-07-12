@@ -10,10 +10,18 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import FormRegister from "../../components/FormRegister/FormRegister";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Thiết Kế Bộ Nhận Diện Thương Hiệu uy tín chất lượng 2023 - The83",
+  desc: "The83 - Thiết Kế Bộ Nhận Diện Thương Hiệu chuyên nghiệp sáng tạo với nhiều năm kinh nghiệm và hàng nghìn bộ nhận diện",
+  url: "https://www.the83.vn/dich-vu-nhan-dien-thuong-hieu",
+};
 
 function Brand() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: "65vh",

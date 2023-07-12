@@ -6,6 +6,13 @@ import AdsClickIcon from "@mui/icons-material/AdsClick";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 import ListCard from "./ListCard";
+import TagHeader from "../../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Dịch Vụ Quảng Cáo Google Ads Việt Nam - The3",
+  desc: "Chúng tôi cung cấp dịch vụ quảng cáo Google Ads tại Việt Nam. Tập trung tối ưu hoá từ khoá nhằm tăng hiệu quả quảng cáo và tiết kiệm chi phí.",
+  url: "https://www.the83.vn/dich-vu-ads/google",
+};
 
 const ItemList = [
   {
@@ -28,6 +35,7 @@ const ItemList = [
 function Google() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: {

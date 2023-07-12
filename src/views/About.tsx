@@ -9,6 +9,7 @@ import CoPresentIcon from "@mui/icons-material/CoPresent";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import BgHeaderStyle from "../components/BgHeader/BgHeaderStyle";
 import ListServices from "../components/Service/ListServices";
+import TagHeader from "../components/TagHeader/TagHeader";
 
 const itemData = [
   {
@@ -73,9 +74,17 @@ const itemData = [
   },
 ];
 
+const Info = {
+  title:
+    "The83 - Chúng tôi là những chuyên gia Social Media Marketing giàu kinh nghiệm",
+  desc: "The83 đã và đang có hơn 6 năm kinh nghiệm kinh doanh online, nên thấu hiểu được sự khó khăn trong biên độ thay đổi liên tục của thị trường hiện nay.",
+  url: "https://www.the83.vn/gioi-thieu",
+};
+
 function About() {
   return (
     <div>
+      <TagHeader {...Info} />
       <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
       <Layout
         props={{

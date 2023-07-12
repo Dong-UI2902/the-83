@@ -13,10 +13,18 @@ import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import SpeakerNotesOffIcon from "@mui/icons-material/SpeakerNotesOff";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Dịch Vụ Tìm Nguồn Hàng Giá Rẻ, Chất Lượng - The83",
+  desc: "Chúng tôi cung cấp dịch vụ tìm kiếm nguồn hàng giá rẻ và chất lượng cho khách hàng. Giúp doanh nghiệp tạo lợi thế về giá cả và chất lượng của sản phẩm.",
+  url: "https://www.the83.vn/dich-vu-tim-nguon-hang",
+};
 
 function Sourcing() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: "65vh",

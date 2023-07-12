@@ -22,6 +22,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 import emailjs from "@emailjs/browser";
 import { ListServices } from "../components/FormRegister/FormRegister";
+import TagHeader from "../components/TagHeader/TagHeader";
 
 const TextInput = styled(TextField)(({ theme }) => ({
   margin: "10px 0",
@@ -30,6 +31,12 @@ TextInput.defaultProps = {
   fullWidth: true,
   variant: "standard",
   id: "fullWidth",
+};
+
+const Info = {
+  title: "Liên hệ - The83",
+  desc: "Chuyên viên tư vấn sẽ gọi lại cho bạn.",
+  url: "https://www.the83.vn/lien-he",
 };
 
 function Contact() {
@@ -78,6 +85,7 @@ function Contact() {
 
   return (
     <div>
+      <TagHeader {...Info} />
       <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
       <Layout
         props={{

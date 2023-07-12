@@ -6,6 +6,7 @@ import { Box, Grid, styled } from "@mui/material";
 import FormRegister from "../../../components/FormRegister/FormRegister";
 import { Link } from "react-router-dom";
 import StepperService from "../../../components/Service/StepperService";
+import TagHeader from "../../../components/TagHeader/TagHeader";
 
 const Title = styled("h2")(({ theme }) => ({
   fontSize: "1.5rem",
@@ -22,9 +23,16 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   borderRadius: "5px",
 }));
 
+const Info = {
+  title: "Dịch vụ quảng cáo Online trực tuyến (Online Advertising) - The83",
+  desc: "The83 - Dịch vụ quảng cáo Online trực tuyến (Online Advertising) hiệu quả. Gia tăng doanh thu, giảm chi phí tối đa cho doanh nghiệp!",
+  url: "https://www.the83.vn/dich-vu-ads",
+};
+
 function AdsServices() {
   return (
     <div>
+      <TagHeader {...Info} />
       <BgHeaderStyle url="/assets/img/services/bg-header.png">
         <Box
           sx={{

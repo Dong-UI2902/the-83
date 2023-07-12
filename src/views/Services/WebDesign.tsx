@@ -10,10 +10,19 @@ import ManageSearchIcon from "@mui/icons-material/ManageSearch";
 import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import FormRegister from "../../components/FormRegister/FormRegister";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title:
+    "Dịch Vụ Thiết Kế Website, Landing Page Chuẩn SEO, Chuyên Nghiệp - The83",
+  desc: "Công ty cung cấp dịch vụ thiết kế website, Landing Page chuyên nghiệp, chuẩn SEO, chuẩn Mobile. Giúp doanh nghiệp tạo lợi thế cạnh tranh trực tuyến.",
+  url: "https://www.the83.vn/dich-vu-webdesign",
+};
 
 function WebDesign() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: "60vh",
@@ -32,12 +41,20 @@ function WebDesign() {
             dung, chức năng đến cả cách thức vận hành.
           </p>
           <Box sx={{ maxWidth: "600px", margin: "0 auto" }}>
-            <img loading="lazy" width="100%" src="/assets/img/web-design/1.png" />
+            <img
+              loading="lazy"
+              width="100%"
+              src="/assets/img/web-design/1.png"
+            />
           </Box>
           <Box className="section">
             <Grid container spacing={4}>
               <Grid item md={6}>
-                <img loading="lazy" width="100%" src="/assets/img/web-design/2.jpg" />
+                <img
+                  loading="lazy"
+                  width="100%"
+                  src="/assets/img/web-design/2.jpg"
+                />
               </Grid>
               <Grid item md={6}>
                 <h1>Tăng trưởng doanh thu – phát triển doanh nghiệp</h1>

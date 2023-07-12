@@ -7,6 +7,7 @@ import AdsClickIcon from "@mui/icons-material/AdsClick";
 import PeopleIcon from "@mui/icons-material/People";
 import AddReactionIcon from "@mui/icons-material/AddReaction";
 import AssessmentIcon from "@mui/icons-material/Assessment";
+import TagHeader from "../../../components/TagHeader/TagHeader";
 
 const ListItem = [
   {
@@ -31,9 +32,16 @@ const ListItem = [
   },
 ];
 
+const Info = {
+  title: "Dịch Vụ Quảng Cáo Youtube Ads Việt Nam - The83",
+  desc: "Tiếp cận khách hàng tiềm năng bằng Quảng cáo YouTube và khuyến khích họ thực hiện mua hàng khi đang xem hoặc tìm kiếm video trên YouTube.",
+  url: "https://www.the83.vn/dich-vu-ads/youtube",
+};
+
 function Youtube() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: {

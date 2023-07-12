@@ -3,10 +3,18 @@ import Layout from "../../../components/Layout/Layout";
 import { Box, Grid } from "@mui/material";
 import FormRegister from "../../../components/FormRegister/FormRegister";
 import ListCard from "./ListCard";
+import TagHeader from "../../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Dịch Vụ Quảng Cáo Facebook Ads tại Việt Nam - The83",
+  desc: "Chúng tôi cung cấp dịch vụ quảng cáo Facebook Ads tại Việt Nam. Tập trung tối ưu hoá hiệu quả quảng cáo Facebook Ads và tiết kiệm chi phí.",
+  url: "https://www.the83.vn/dich-vu-ads/facebook",
+};
 
 function Facebook() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: {

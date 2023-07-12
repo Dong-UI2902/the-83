@@ -10,9 +10,18 @@ import LeaderboardIcon from "@mui/icons-material/Leaderboard";
 import DifferenceIcon from "@mui/icons-material/Difference";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import FormRegister from "../../components/FormRegister/FormRegister";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Thiết Kế Hình Ảnh, Video Chuyên Nghiệp - The83",
+  desc: "The83 - Dịch vụ thiết kế hình ảnh, video chuyên nghiệp giúp doanh nghiệp gây ấn tượng hơn với khách hàng!",
+  url: "https://www.the83.vn/dich-vu-editor",
+};
+
 function Editor() {
   return (
     <div>
+      <TagHeader {...Info} />
       <BgHeaderStyle
         props={{ height: "44vh", backgroundSize: "contain" }}
         url={"/assets/img/editor/bg-header.webp"}

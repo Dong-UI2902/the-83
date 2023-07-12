@@ -3,10 +3,18 @@ import Layout from "../../components/Layout/Layout";
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import FormRegister from "../../components/FormRegister/FormRegister";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Khoá học Social Media Advertising cho người mới bắt đầu",
+  desc: "The83 - Để bắt nhịp với thị hiếu người tiêu dùng, học về social media là một điều cần thiết với các nhà quảng cáo trẻ tuổi. The83 có đầy đủ những khoá học quảng cáo trên các kênh social media mà bạn cần.",
+  url: "https://www.the83.vn/dich-vu-khoa-hoc-ads",
+};
 
 function Learning() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: "65vh",

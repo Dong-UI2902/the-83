@@ -17,6 +17,7 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import ManageHistoryIcon from "@mui/icons-material/ManageHistory";
 import PeopleIcon from "@mui/icons-material/People";
+import TagHeader from "../../../components/TagHeader/TagHeader";
 
 const ItemList = [
   {
@@ -51,9 +52,16 @@ const ItemList = [
   },
 ];
 
+const Info = {
+  title: "Dịch Vụ Quảng Cáo Tiktok Ads Việt Nam - The83",
+  desc: "Với Dịch Vụ Quảng Cáo TikTok Ads bạn có thể kết nối với khách hàng của mình khi họ đang lướt TikTok một cách hiệu quả và nhanh chóng.",
+  url: "https://www.the83.vn/dich-vu-ads/tiktok",
+};
+
 function Tiktok() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: {

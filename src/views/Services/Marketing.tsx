@@ -6,9 +6,18 @@ import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import TagHeader from "../../components/TagHeader/TagHeader";
+
+const Info = {
+  title: "Tư Vấn Chiến Lược Marketing Online - 6 Năm Kinh Nghiệm",
+  desc: "The83 - Dịch vụ tư vấn chiến lược Marketing Online tổng thể cùng đội ngũ giàu kinh nghiệm tư vấn trực tiếp cho doanh nghiệp!",
+  url: "https://www.the83.vn/dich-vu-marketing-online",
+};
+
 function Marketing() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Box
         sx={{
           height: {

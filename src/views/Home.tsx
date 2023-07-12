@@ -15,6 +15,7 @@ import Confused from "../components/Main/Confused";
 import ListServices from "../components/Service/ListServices";
 import StepperService from "../components/Service/StepperService";
 import FormRegister from "../components/FormRegister/FormRegister";
+import TagHeader from "../components/TagHeader/TagHeader";
 
 const BgImgStyle = styled("img")(({ theme }) => ({
   width: "100%",
@@ -45,9 +46,16 @@ const itemData = [
   },
 ];
 
+const Info = {
+  title: "The83 Social Media",
+  desc: "The83.vn - Dịch vụ Social Media Marketing tổng thể kết hợp tư duy chiến lược và sáng tạo. Liên hệ ngay!",
+  url: "https://www.the83.vn/",
+};
+
 function home() {
   return (
     <div>
+      <TagHeader {...Info} />
       <Layout props={{ paddingTop: "70px", position: "relative" }}>
         <BgHeader />
         <Header />
