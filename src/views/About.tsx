@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../components/Layout/Layout";
 import { Box, Grid, styled } from "@mui/material";
-import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import CardUi from "../components/Main/CardUi";
 import SettingsIcon from "@mui/icons-material/Settings";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
@@ -10,7 +9,6 @@ import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import BgHeaderStyle from "../components/BgHeader/BgHeaderStyle";
 import ListServices from "../components/Service/ListServices";
 import TagHeader from "../components/TagHeader/TagHeader";
-import { Helmet } from "react-helmet";
 
 const itemData = [
   {
@@ -85,9 +83,7 @@ const Info = {
 function About() {
   return (
     <div>
-      <Helmet>
-        <title>Con cặc</title>
-      </Helmet>
+      <TagHeader {...Info} />
       <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
       <Layout
         props={{
