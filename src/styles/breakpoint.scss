@@ -25,6 +25,7 @@
             order: -1;
             .main-img {
                 width: 100px;
+                display: none;
             }
     
             .search {
@@ -42,19 +43,20 @@
             }
     
             .meta {
-                width: 150px;
+                width: 210px;
                 right: 10px;
+                top: 30px
             }
     
             .web {
                 width: 200px;
-                right: 70px;
-                bottom: -120px;
+                right: 30px;
+                bottom: -180px;
             }
     
             .tiktok {
-                width: 100px;
-                bottom: -10px;
+                width: 120px;
+                bottom: -140px;
             }
         }
     }

@@ -160,6 +160,10 @@ export default function PersistentDrawerLeft() {
     setAnchorEl(null);
   };
 
+  const toggleDrawer = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -391,9 +395,9 @@ export default function PersistentDrawerLeft() {
             boxSizing: "border-box",
           },
         }}
-        variant="persistent"
         anchor="left"
         open={open}
+        onClose={toggleDrawer}
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
@@ -406,30 +410,133 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {navItems.map((item, index) => {
+            if (item.href !== "/dich-vu") {
+              return (
+                <ListItem
+                  key={index}
+                  disablePadding
+                  onClick={toggleDrawer}
+                  onKeyDown={toggleDrawer}
+                >
+                  <ListItemButton>
+                    <LinkStyle
+                      href={item.href}
+                      className={checkRoute(item.href) ? "active" : ""}
+                    >
+                      {item.name}
+                    </LinkStyle>
+                  </ListItemButton>
+                </ListItem>
+              );
+            }
+
+            return <></>;
+          })}
         </List>
         <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-ads"}
+              className={checkRoute("/dich-vu-ads") ? "active" : ""}
+            >
+              Dịch vụ quảng cáo Online
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-webdesign"}
+              className={checkRoute("/dich-vu-webdesign") ? "active" : ""}
+            >
+              Thiết kế, chăm sóc website, lading page
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-editor"}
+              className={checkRoute("/dich-vu-editor") ? "active" : ""}
+            >
+              Thiết kế hình ảnh, video
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-khoa-hoc-ads"}
+              className={checkRoute("/dich-vu-khoa-hoc-ads") ? "active" : ""}
+            >
+              Dịch vụ khoá học Ads
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-marketing-online"}
+              className={
+                checkRoute("/dich-vu-marketing-online") ? "active" : ""
+              }
+            >
+              Tư Vấn Chiến Lược Marketing Online
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-nhan-dien-thuong-hieu"}
+              className={
+                checkRoute("/dich-vu-nhan-dien-thuong-hieu") ? "active" : ""
+              }
+            >
+              Xây dựng bộ nhận diện thương hiệu
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
+        <ListItem
+          disablePadding
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <ListItemButton>
+            <LinkStyle
+              href={"/dich-vu-tim-nguon-hang"}
+              className={checkRoute("/dich-vu-tim-nguon-hang") ? "active" : ""}
+            >
+              Tìm nguồn hàng phát triển hệ thống kinh doanh
+            </LinkStyle>
+          </ListItemButton>
+        </ListItem>
       </Drawer>
     </div>
   );

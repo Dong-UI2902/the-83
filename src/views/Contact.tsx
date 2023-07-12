@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import BgHeaderStyle from "../components/BgHeader/BgHeaderStyle";
 import {
   Box,
@@ -10,12 +10,18 @@ import {
   Button,
   styled,
   TextField,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
 } from "@mui/material";
 import Layout from "../components/Layout/Layout";
 import BusinessIcon from "@mui/icons-material/Business";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
+import emailjs from "@emailjs/browser";
+import { ListServices } from "../components/FormRegister/FormRegister";
 
 const TextInput = styled(TextField)(({ theme }) => ({
   margin: "10px 0",
@@ -27,6 +33,49 @@ TextInput.defaultProps = {
 };
 
 function Contact() {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [openError, setOpenError] = React.useState(false);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        "service_nj93xea",
+        "template_wi73gfo",
+        form.current,
+        "X1MHSDgn2rVLBAVHP"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setOpen(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setOpenError(true);
+        }
+      )
+      .finally(() => {
+        e.target.reset();
+        setLoading(false);
+      });
+  };
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+    setOpenError(false);
+  };
+
   return (
     <div>
       <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
@@ -113,15 +162,63 @@ function Contact() {
             </Grid>
             <Grid item md={5}>
               <h1 style={{ margin: 0 }}>Tư vấn & Báo giá dịch vụ!</h1>
-              <form>
-                <TextInput label="Họ và tên" />
-                <TextInput label="Điện thoại" />
-                <TextInput label="Email" />
-                <TextInput label="Tên doanh nghiệp" />
-                <TextInput label="Website (nếu có)" />
+              <form ref={form} onSubmit={sendEmail}>
+                <TextInput
+                  label="Họ và tên"
+                  name="user_name"
+                  type="text"
+                  required
+                />
+                <TextInput
+                  label="Điện thoại"
+                  name="user_phone_number"
+                  type="text"
+                  required
+                />
+                <TextInput
+                  label="Email"
+                  name="user_email"
+                  type="email"
+                  required
+                />
+                <TextInput
+                  label="Tên doanh nghiệp  (nếu có)"
+                  name="user_business"
+                />
+                <TextInput label="Website (nếu có)" name="user_site" />
+                <FormControl
+                  variant="standard"
+                  sx={{ m: "10px 0", width: "100%" }}
+                >
+                  <InputLabel
+                    id="demo-simple-select-standard-label"
+                    variant="standard"
+                  >
+                    Chọn dịch vụ cần hỗ trợ
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-standard-label"
+                    id="demo-simple-select-standard"
+                    label="Age"
+                    name="user_service"
+                    required
+                  >
+                    {ListServices.map((item, index) => (
+                      <MenuItem key={index} value={item}>
+                        {item}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
                 <center>
-                  <Button variant="contained" sx={{ marginTop: 2 }}>
-                    Contained
+                  <Button
+                    variant="contained"
+                    sx={{ marginTop: 2, p: "7px 70px" }}
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Đang gửi..." : "Gửi"}
                   </Button>
                 </center>
               </form>

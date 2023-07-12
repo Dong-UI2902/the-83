@@ -53,36 +53,30 @@ const ListServices: FC<{ itemData: any[] }> = ({ itemData }) => {
             {itemData.slice(i, i + sliderItems).map((item, index) => {
               return (
                 <Grid item xs={6} key={i}>
-                  <ImageListItem>
+                  <ImageListItem key={item.img}>
                     <img
                       src={`${item.img}?w=248&fit=crop&auto=format`}
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       alt={item.title}
                       loading="lazy"
                     />
-                    <ImageListItemBar
-                      title={
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{
-                            color: "var(--light-color)",
-                            display: "-webkit-box",
-                            WebkitLineClamp: "2!important",
-                          }}
-                        >
-                          {item.title}
-                        </Link>
-                      }
-                      actionIcon={
-                        <IconButton
-                          sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                          aria-label={`info about ${item.title}`}
-                        >
-                          <InfoIcon />
-                        </IconButton>
-                      }
-                    />
+                    <Link
+                      href={item.href}
+                      underline="none"
+                      sx={{
+                        color: "var(--light-color)",
+                        p: 0,
+                      }}
+                    >
+                      <ImageListItemBar
+                        title={item.title}
+                        sx={{
+                          "*": { whiteSpace: "unset!important" },
+                          height: "100%",
+                          textAlign: "center",
+                        }}
+                      />
+                    </Link>
                   </ImageListItem>
                 </Grid>
               );
@@ -95,40 +89,38 @@ const ListServices: FC<{ itemData: any[] }> = ({ itemData }) => {
 
   return (
     <div>
-      <ImageList cols={isMobile ? 2 : 4}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <ImageListItemBar
-              title={
-                <LightTooltip title={item.title} placement="top">
-                  <Link
-                    href={item.href}
-                    underline="none"
-                    sx={{ color: "var(--light-color)" }}
-                  >
-                    {item.title}
-                  </Link>
-                </LightTooltip>
-              }
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                >
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-      <Box sx={{ display: { md: "none", xs: "block" } }}>
+      <Box sx={{ display: { md: "block", xs: "none" }, marginTop: "50px" }}>
+        <ImageList cols={4}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Link
+                href={item.href}
+                underline="none"
+                sx={{
+                  color: "var(--light-color)",
+                  p: 0,
+                }}
+              >
+                <ImageListItemBar
+                  title={item.title}
+                  sx={{
+                    "*": { whiteSpace: "unset!important" },
+                    height: "100%",
+                    textAlign: "center",
+                  }}
+                />
+              </Link>
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
+      <Box sx={{ display: { md: "none", xs: "block" }, marginTop: "20px" }}>
         <Carousel
           animation="slide"
           autoPlay={true}
