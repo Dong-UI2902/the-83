@@ -10,6 +10,7 @@ import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import BgHeaderStyle from "../components/BgHeader/BgHeaderStyle";
 import ListServices from "../components/Service/ListServices";
 import TagHeader from "../components/TagHeader/TagHeader";
+import { Helmet } from "react-helmet";
 
 const itemData = [
   {
@@ -84,7 +85,9 @@ const Info = {
 function About() {
   return (
     <div>
-      <TagHeader {...Info} />
+      <Helmet>
+        <title>Con cặc</title>
+      </Helmet>
       <BgHeaderStyle url={"/assets/img/about/bg-header.png"} />
       <Layout
         props={{
